@@ -13,8 +13,7 @@ ALTRIX 3.1a:
 1a. Compressed 32 Scripts Into 10
 1b. ALTRIX Should Run Quicker
 1c. More Room For More Scripts / Future Exploits!
-2. Added Update Checker
-3. Added Back Splash Screen
+2. Added Back Splash Screen
 
 ALTRIX 3.0a:
 1. Organized Code Layout
