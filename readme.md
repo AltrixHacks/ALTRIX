@@ -1,3 +1,3 @@
 # ALTRIX
-##View our website for more information.
+## View our website for more information.
 https://AltrixHacks.github.io/
