@@ -9,6 +9,9 @@ _____/\\\\\\\\\_____/\\\__________/\\\\\\\\\\\\\\\____/\\\\\\\\\______/\\\\\\\\\
        _\/\\\_______\/\\\_\/\\\\\\\\\\\\\\\___\/\\\_______\/\\\______\//\\\__/\\\\\\\\\\\__/\\\/___\///\\\_ 
         _\///________\///__\///////////////____\///________\///________\///__\///////////__\///_______\///__
 
+ALTRIX 3.2a:
+1. Added Automatic Updater
+
 ALTRIX 3.1a:
 1a. Compressed 32 Scripts Into 10
 1b. ALTRIX Should Run Quicker
@@ -25,7 +28,7 @@ ALTRIX 3.0a:
 6. Possibly Fixed A Few Anticheat Issues In Most Games
 --]]
 
-local Altrix31NotReleased = Instance.new("ScreenGui")
+local Altrix32 = Instance.new("ScreenGui")
 local core = Instance.new("Folder")
 local Header = Instance.new("Frame")
 local ALTRIX = Instance.new("TextLabel")
@@ -167,13 +170,13 @@ local InjectBG = Instance.new("ImageLabel")
 
 --Properties:
 
-Altrix31NotReleased.Name = "Altrix (3.1) Not Released"
-Altrix31NotReleased.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
-Altrix31NotReleased.DisplayOrder = 999999999
-Altrix31NotReleased.ResetOnSpawn = false
+Altrix32.Name = "Altrix (3.2)"
+Altrix32.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+Altrix32.DisplayOrder = 999999999
+Altrix32.ResetOnSpawn = false
 
 core.Name = "core"
-core.Parent = Altrix31NotReleased
+core.Parent = Altrix32
 
 Header.Name = "Header"
 Header.Parent = core
@@ -229,7 +232,7 @@ VN.Position = UDim2.new(0.850000024, 0, 0, 0)
 VN.Size = UDim2.new(0.150000006, 0, 0.600000024, 0)
 VN.ZIndex = 5
 VN.Font = Enum.Font.SourceSansLight
-VN.Text = "V3.1"
+VN.Text = "V3.2"
 VN.TextColor3 = Color3.fromRGB(255, 255, 255)
 VN.TextScaled = true
 VN.TextSize = 15.000
@@ -247,7 +250,7 @@ corescripts.Name = "corescripts"
 corescripts.Parent = core
 
 etc.Name = "etc"
-etc.Parent = Altrix31NotReleased
+etc.Parent = Altrix32
 
 help.Name = "help"
 help.Parent = etc
@@ -1558,7 +1561,7 @@ Round_11.ScaleType = Enum.ScaleType.Slice
 Round_11.SliceCenter = Rect.new(100, 100, 100, 100)
 
 Inject.Name = "Inject"
-Inject.Parent = Altrix31NotReleased
+Inject.Parent = Altrix32
 Inject.BackgroundColor3 = Color3.fromRGB(9, 9, 9)
 Inject.BorderSizePixel = 0
 Inject.Position = UDim2.new(0, 0, 0.400000006, 0)
@@ -1606,7 +1609,7 @@ TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel.TextSize = 100.000
 
 InjectBG.Name = "InjectBG"
-InjectBG.Parent = Altrix31NotReleased
+InjectBG.Parent = Altrix32
 InjectBG.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 InjectBG.Size = UDim2.new(1, 0, 1, 0)
 InjectBG.Visible = false
@@ -1614,8 +1617,8 @@ InjectBG.Image = "rbxassetid://2024457953"
 
 -- Scripts:
 
-local function AQLTHDG_fake_script() -- Altrix31NotReleased.Changelog 
-	local script = Instance.new('LocalScript', Altrix31NotReleased)
+local function RQSM_fake_script() -- Altrix32.Changelog 
+	local script = Instance.new('LocalScript', Altrix32)
 
 	--[[
 	_____/\\\\\\\\\_____/\\\__________/\\\\\\\\\\\\\\\____/\\\\\\\\\______/\\\\\\\\\\\__/\\\_______/\\\_        
@@ -1645,8 +1648,8 @@ local function AQLTHDG_fake_script() -- Altrix31NotReleased.Changelog
 	6. Possibly Fixed A Few Anticheat Issues In Most Games
 	--]]
 end
-coroutine.wrap(AQLTHDG_fake_script)()
-local function QHNE_fake_script() -- Command.keybind 
+coroutine.wrap(RQSM_fake_script)()
+local function ELOX_fake_script() -- Command.keybind 
 	local script = Instance.new('LocalScript', Command)
 
 	local ContextActionService = game:GetService("ContextActionService")
@@ -1660,8 +1663,8 @@ local function QHNE_fake_script() -- Command.keybind
 	end
 	ContextActionService:BindAction(ACTION_NAME, handleAction, false, Enum.KeyCode.Semicolon)
 end
-coroutine.wrap(QHNE_fake_script)()
-local function OISCXSN_fake_script() -- corescripts.commandhandler 
+coroutine.wrap(ELOX_fake_script)()
+local function MYWGEI_fake_script() -- corescripts.commandhandler 
 	local script = Instance.new('LocalScript', corescripts)
 
 	wait()
@@ -1717,8 +1720,8 @@ local function OISCXSN_fake_script() -- corescripts.commandhandler
 	    end
 	end)
 end
-coroutine.wrap(OISCXSN_fake_script)()
-local function XGZF_fake_script() -- Header_2.HeaderSetup 
+coroutine.wrap(MYWGEI_fake_script)()
+local function WGBK_fake_script() -- Header_2.HeaderSetup 
 	local script = Instance.new('LocalScript', Header_2)
 
 	script.Parent.Visible = false
@@ -1731,8 +1734,8 @@ local function XGZF_fake_script() -- Header_2.HeaderSetup
 		script.Parent.Visible = false
 	end)
 end
-coroutine.wrap(XGZF_fake_script)()
-local function IJEUU_fake_script() -- walkair_2.walkair 
+coroutine.wrap(WGBK_fake_script)()
+local function UCTO_fake_script() -- walkair_2.walkair 
 	local script = Instance.new('LocalScript', walkair_2)
 
 	--[[
@@ -1832,8 +1835,8 @@ local function IJEUU_fake_script() -- walkair_2.walkair
 	end)
 	Fly()
 end
-coroutine.wrap(IJEUU_fake_script)()
-local function NNAXO_fake_script() -- Header_3.HeaderSetup 
+coroutine.wrap(UCTO_fake_script)()
+local function BLUOEU_fake_script() -- Header_3.HeaderSetup 
 	local script = Instance.new('LocalScript', Header_3)
 
 	script.Parent.Visible = false
@@ -1846,8 +1849,8 @@ local function NNAXO_fake_script() -- Header_3.HeaderSetup
 		script.Parent.Visible = false
 	end)
 end
-coroutine.wrap(NNAXO_fake_script)()
-local function YFSXK_fake_script() -- m.moc 
+coroutine.wrap(BLUOEU_fake_script)()
+local function HMGW_fake_script() -- m.moc 
 	local script = Instance.new('LocalScript', m)
 
 	script.Parent.MouseButton1Down:connect(function()
@@ -1871,8 +1874,8 @@ local function YFSXK_fake_script() -- m.moc
 		end)
 	end
 end
-coroutine.wrap(YFSXK_fake_script)()
-local function PKTSWLZ_fake_script() -- Header_4.HeaderSetup 
+coroutine.wrap(HMGW_fake_script)()
+local function SEVCBM_fake_script() -- Header_4.HeaderSetup 
 	local script = Instance.new('LocalScript', Header_4)
 
 	script.Parent.Visible = false
@@ -1885,8 +1888,8 @@ local function PKTSWLZ_fake_script() -- Header_4.HeaderSetup
 		script.Parent.Visible = false
 	end)
 end
-coroutine.wrap(PKTSWLZ_fake_script)()
-local function ZSED_fake_script() -- server.serverspeedgetter 
+coroutine.wrap(SEVCBM_fake_script)()
+local function OWVHEGB_fake_script() -- server.serverspeedgetter 
 	local script = Instance.new('LocalScript', server)
 
 	while true do
@@ -1894,8 +1897,8 @@ local function ZSED_fake_script() -- server.serverspeedgetter
 		script.Parent.Text = "Server: "..game.Players.LocalPlayer.Character:WaitForChild("Humanoid").WalkSpeed
 	end
 end
-coroutine.wrap(ZSED_fake_script)()
-local function TUXMYVS_fake_script() -- client.ClientSpeedUpdate 
+coroutine.wrap(OWVHEGB_fake_script)()
+local function RFXVYFY_fake_script() -- client.ClientSpeedUpdate 
 	local script = Instance.new('LocalScript', client)
 
 	wait()
@@ -1911,8 +1914,8 @@ local function TUXMYVS_fake_script() -- client.ClientSpeedUpdate
 		game.Players.LocalPlayer.Character:WaitForChild("Humanoid").WalkSpeed = script.Parent.Text
 	end)
 end
-coroutine.wrap(TUXMYVS_fake_script)()
-local function URVIJ_fake_script() -- Lock.SpeedLocker 
+coroutine.wrap(RFXVYFY_fake_script)()
+local function IMASBHP_fake_script() -- Lock.SpeedLocker 
 	local script = Instance.new('LocalScript', Lock)
 
 	script.Parent.MouseButton1Down:connect(function()
@@ -1925,8 +1928,8 @@ local function URVIJ_fake_script() -- Lock.SpeedLocker
 		end 
 	end)
 end
-coroutine.wrap(URVIJ_fake_script)()
-local function BSJEQRB_fake_script() -- Lock.SpeedLockerFORCE 
+coroutine.wrap(IMASBHP_fake_script)()
+local function XCPH_fake_script() -- Lock.SpeedLockerFORCE 
 	local script = Instance.new('LocalScript', Lock)
 
 	while true do
@@ -1936,8 +1939,8 @@ local function BSJEQRB_fake_script() -- Lock.SpeedLockerFORCE
 		wait(0.01)
 	end
 end
-coroutine.wrap(BSJEQRB_fake_script)()
-local function ZLBSRSB_fake_script() -- Header_5.HeaderSetup 
+coroutine.wrap(XCPH_fake_script)()
+local function MSUD_fake_script() -- Header_5.HeaderSetup 
 	local script = Instance.new('LocalScript', Header_5)
 
 	script.Parent.Visible = false
@@ -1950,8 +1953,8 @@ local function ZLBSRSB_fake_script() -- Header_5.HeaderSetup
 		script.Parent.Visible = false
 	end)
 end
-coroutine.wrap(ZLBSRSB_fake_script)()
-local function IEZV_fake_script() -- server_2.serverspeedgetter 
+coroutine.wrap(MSUD_fake_script)()
+local function PNYJP_fake_script() -- server_2.serverspeedgetter 
 	local script = Instance.new('LocalScript', server_2)
 
 	while true do
@@ -1959,8 +1962,8 @@ local function IEZV_fake_script() -- server_2.serverspeedgetter
 		script.Parent.Text = "Server: "..game.Players.LocalPlayer.Character:WaitForChild("Humanoid").JumpPower
 	end
 end
-coroutine.wrap(IEZV_fake_script)()
-local function JBDAFYW_fake_script() -- client_2.ClientSpeedUpdate 
+coroutine.wrap(PNYJP_fake_script)()
+local function KIOBD_fake_script() -- client_2.ClientSpeedUpdate 
 	local script = Instance.new('LocalScript', client_2)
 
 	wait()
@@ -1976,8 +1979,8 @@ local function JBDAFYW_fake_script() -- client_2.ClientSpeedUpdate
 		game.Players.LocalPlayer.Character:WaitForChild("Humanoid").JumpPower = script.Parent.Text
 	end)
 end
-coroutine.wrap(JBDAFYW_fake_script)()
-local function SYOZL_fake_script() -- Lock_2.SpeedLocker 
+coroutine.wrap(KIOBD_fake_script)()
+local function KJJNAFR_fake_script() -- Lock_2.SpeedLocker 
 	local script = Instance.new('LocalScript', Lock_2)
 
 	script.Parent.MouseButton1Down:connect(function()
@@ -1990,8 +1993,8 @@ local function SYOZL_fake_script() -- Lock_2.SpeedLocker
 		end 
 	end)
 end
-coroutine.wrap(SYOZL_fake_script)()
-local function DTTS_fake_script() -- Lock_2.SpeedLockerFORCE 
+coroutine.wrap(KJJNAFR_fake_script)()
+local function UUUTU_fake_script() -- Lock_2.SpeedLockerFORCE 
 	local script = Instance.new('LocalScript', Lock_2)
 
 	while true do
@@ -2001,8 +2004,8 @@ local function DTTS_fake_script() -- Lock_2.SpeedLockerFORCE
 		wait(0.01)
 	end
 end
-coroutine.wrap(DTTS_fake_script)()
-local function VQOVLUJ_fake_script() -- Header_6.HeaderSetup 
+coroutine.wrap(UUUTU_fake_script)()
+local function TKQABAK_fake_script() -- Header_6.HeaderSetup 
 	local script = Instance.new('LocalScript', Header_6)
 
 	script.Parent.Visible = false
@@ -2015,16 +2018,16 @@ local function VQOVLUJ_fake_script() -- Header_6.HeaderSetup
 		script.Parent.Visible = false
 	end)
 end
-coroutine.wrap(VQOVLUJ_fake_script)()
-local function GTWREM_fake_script() -- Close_6.Closer 
+coroutine.wrap(TKQABAK_fake_script)()
+local function KTBOR_fake_script() -- Close_6.Closer 
 	local script = Instance.new('LocalScript', Close_6)
 
 	script.Parent.MouseButton1Down:connect(function()
 		script.Parent.Parent.Visible = false
 	end)
 end
-coroutine.wrap(GTWREM_fake_script)()
-local function TWPTK_fake_script() -- Reason2Die.SoftwareActivator 
+coroutine.wrap(KTBOR_fake_script)()
+local function HJRGCGK_fake_script() -- Reason2Die.SoftwareActivator 
 	local script = Instance.new('LocalScript', Reason2Die)
 
 	function startsoftware()
@@ -2038,8 +2041,8 @@ local function TWPTK_fake_script() -- Reason2Die.SoftwareActivator
 		startsoftware()
 	end)
 end
-coroutine.wrap(TWPTK_fake_script)()
-local function DGCWGR_fake_script() -- Header_7.HeaderSetup 
+coroutine.wrap(HJRGCGK_fake_script)()
+local function SVXFRG_fake_script() -- Header_7.HeaderSetup 
 	local script = Instance.new('LocalScript', Header_7)
 
 	script.Parent.Visible = false
@@ -2052,8 +2055,8 @@ local function DGCWGR_fake_script() -- Header_7.HeaderSetup
 		script.Parent.Visible = false
 	end)
 end
-coroutine.wrap(DGCWGR_fake_script)()
-local function FKFTT_fake_script() -- Expand.hbe 
+coroutine.wrap(SVXFRG_fake_script)()
+local function FYVYFJP_fake_script() -- Expand.hbe 
 	local script = Instance.new('LocalScript', Expand)
 
 	script.Parent.MouseButton1Down:connect(function()
@@ -2086,8 +2089,8 @@ local function FKFTT_fake_script() -- Expand.hbe
 		end
 	end)
 end
-coroutine.wrap(FKFTT_fake_script)()
-local function IJMVMSK_fake_script() -- Header_8.HeaderSetup 
+coroutine.wrap(FYVYFJP_fake_script)()
+local function WGZSAV_fake_script() -- Header_8.HeaderSetup 
 	local script = Instance.new('LocalScript', Header_8)
 
 	script.Parent.Visible = false
@@ -2100,8 +2103,8 @@ local function IJMVMSK_fake_script() -- Header_8.HeaderSetup
 		script.Parent.Visible = false
 	end)
 end
-coroutine.wrap(IJMVMSK_fake_script)()
-local function EKYCQMY_fake_script() -- Time.LightingApp 
+coroutine.wrap(WGZSAV_fake_script)()
+local function QNQT_fake_script() -- Time.LightingApp 
 	local script = Instance.new('LocalScript', Time)
 
 	local apply = script.Parent.Apply
@@ -2112,8 +2115,8 @@ local function EKYCQMY_fake_script() -- Time.LightingApp
 		game.Lighting.ClockTime = value.Text
 	end)
 end
-coroutine.wrap(EKYCQMY_fake_script)()
-local function LGHUXH_fake_script() -- FogStart.LightingApp 
+coroutine.wrap(QNQT_fake_script)()
+local function KWBVXT_fake_script() -- FogStart.LightingApp 
 	local script = Instance.new('LocalScript', FogStart)
 
 	local apply = script.Parent.Apply
@@ -2124,8 +2127,8 @@ local function LGHUXH_fake_script() -- FogStart.LightingApp
 		game.Lighting.FogStart = value.Text
 	end)
 end
-coroutine.wrap(LGHUXH_fake_script)()
-local function BDYEFV_fake_script() -- FogEnd.LightingApp 
+coroutine.wrap(KWBVXT_fake_script)()
+local function WVQTE_fake_script() -- FogEnd.LightingApp 
 	local script = Instance.new('LocalScript', FogEnd)
 
 	local apply = script.Parent.Apply
@@ -2136,8 +2139,8 @@ local function BDYEFV_fake_script() -- FogEnd.LightingApp
 		game.Lighting.FogEnd = value.Text
 	end)
 end
-coroutine.wrap(BDYEFV_fake_script)()
-local function LPMKMNC_fake_script() -- Exposure.LightingApp 
+coroutine.wrap(WVQTE_fake_script)()
+local function PNPYFS_fake_script() -- Exposure.LightingApp 
 	local script = Instance.new('LocalScript', Exposure)
 
 	local apply = script.Parent.Apply
@@ -2148,8 +2151,8 @@ local function LPMKMNC_fake_script() -- Exposure.LightingApp
 		game.Lighting.ExposureCompensation = value.Text
 	end)
 end
-coroutine.wrap(LPMKMNC_fake_script)()
-local function IRZJ_fake_script() -- Brightness.LightingApp 
+coroutine.wrap(PNPYFS_fake_script)()
+local function BRBRJ_fake_script() -- Brightness.LightingApp 
 	local script = Instance.new('LocalScript', Brightness)
 
 	local apply = script.Parent.Apply
@@ -2160,8 +2163,8 @@ local function IRZJ_fake_script() -- Brightness.LightingApp
 		game.Lighting.Brightness = value.Text
 	end)
 end
-coroutine.wrap(IRZJ_fake_script)()
-local function MVWZLO_fake_script() -- Header_9.HeaderSetup 
+coroutine.wrap(BRBRJ_fake_script)()
+local function OSRR_fake_script() -- Header_9.HeaderSetup 
 	local script = Instance.new('LocalScript', Header_9)
 
 	script.Parent.Visible = false
@@ -2174,8 +2177,8 @@ local function MVWZLO_fake_script() -- Header_9.HeaderSetup
 		script.Parent.Visible = false
 	end)
 end
-coroutine.wrap(MVWZLO_fake_script)()
-local function LHYJSQ_fake_script() -- walkair_3.yesclip 
+coroutine.wrap(OSRR_fake_script)()
+local function XFNG_fake_script() -- walkair_3.yesclip 
 	local script = Instance.new('LocalScript', walkair_3)
 
 	noclip = false
@@ -2198,8 +2201,8 @@ local function LHYJSQ_fake_script() -- walkair_3.yesclip
 	end)
 	
 end
-coroutine.wrap(LHYJSQ_fake_script)()
-local function CGEP_fake_script() -- Header_10.HeaderSetup 
+coroutine.wrap(XFNG_fake_script)()
+local function JHCNM_fake_script() -- Header_10.HeaderSetup 
 	local script = Instance.new('LocalScript', Header_10)
 
 	script.Parent.Visible = false
@@ -2212,8 +2215,8 @@ local function CGEP_fake_script() -- Header_10.HeaderSetup
 		script.Parent.Visible = false
 	end)
 end
-coroutine.wrap(CGEP_fake_script)()
-local function TLDPY_fake_script() -- walkair_4.kliktp 
+coroutine.wrap(JHCNM_fake_script)()
+local function MIXCQ_fake_script() -- walkair_4.kliktp 
 	local script = Instance.new('LocalScript', walkair_4)
 
 	local Player = game.Players.LocalPlayer
@@ -2261,8 +2264,8 @@ local function TLDPY_fake_script() -- walkair_4.kliktp
 		end 
 	end)
 end
-coroutine.wrap(TLDPY_fake_script)()
-local function ATWTPS_fake_script() -- Header_11.HeaderSetup 
+coroutine.wrap(MIXCQ_fake_script)()
+local function JPJG_fake_script() -- Header_11.HeaderSetup 
 	local script = Instance.new('LocalScript', Header_11)
 
 	script.Parent.Visible = false
@@ -2275,8 +2278,8 @@ local function ATWTPS_fake_script() -- Header_11.HeaderSetup
 		script.Parent.Visible = false
 	end)
 end
-coroutine.wrap(ATWTPS_fake_script)()
-local function UXFVTWJ_fake_script() -- Inject.Inject 
+coroutine.wrap(JPJG_fake_script)()
+local function NVCWG_fake_script() -- Inject.Inject 
 	local script = Instance.new('LocalScript', Inject)
 
 	wait()
@@ -2289,15 +2292,4 @@ local function UXFVTWJ_fake_script() -- Inject.Inject
 	script.Parent.Parent:WaitForChild("InjectBG"):Destroy()
 	script.Parent:Destroy()
 end
-coroutine.wrap(UXFVTWJ_fake_script)()
---[[
-_____/\\\\\\\\\_____/\\\__________/\\\\\\\\\\\\\\\____/\\\\\\\\\______/\\\\\\\\\\\__/\\\_______/\\\_        
- ___/\\\\\\\\\\\\\__\/\\\_________\///////\\\/////___/\\\///////\\\___\/////\\\///__\///\\\___/\\\/__       
-  __/\\\/////////\\\_\/\\\_______________\/\\\_______\/\\\_____\/\\\_______\/\\\_______\///\\\\\\/____      
-   _\/\\\_______\/\\\_\/\\\_______________\/\\\_______\/\\\\\\\\\\\/________\/\\\_________\//\\\\______     
-    _\/\\\\\\\\\\\\\\\_\/\\\_______________\/\\\_______\/\\\//////\\\________\/\\\__________\/\\\\______    
-     _\/\\\/////////\\\_\/\\\_______________\/\\\_______\/\\\____\//\\\_______\/\\\__________/\\\\\\_____   
-      _\/\\\_______\/\\\_\/\\\_______________\/\\\_______\/\\\_____\//\\\______\/\\\________/\\\////\\\___  
-       _\/\\\_______\/\\\_\/\\\\\\\\\\\\\\\___\/\\\_______\/\\\______\//\\\__/\\\\\\\\\\\__/\\\/___\///\\\_ 
-        _\///________\///__\///////////////____\///________\///________\///__\///////////__\///_______\///__
-]]--
+coroutine.wrap(NVCWG_fake_script)()
