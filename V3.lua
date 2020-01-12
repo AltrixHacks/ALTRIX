@@ -8,7 +8,11 @@ _____/\\\\\\\\\_____/\\\__________/\\\\\\\\\\\\\\\____/\\\\\\\\\______/\\\\\\\\\
       _\/\\\_______\/\\\_\/\\\_______________\/\\\_______\/\\\_____\//\\\______\/\\\________/\\\////\\\___  
        _\/\\\_______\/\\\_\/\\\\\\\\\\\\\\\___\/\\\_______\/\\\______\//\\\__/\\\\\\\\\\\__/\\\/___\///\\\_ 
         _\///________\///__\///////////////____\///________\///________\///__\///////////__\///_______\///__
-ALTRIX 3.2a:
-1. Added Automatic Updater
+ALTRIX 3.3:
+1. Dropped The Letter At The End Of Version Numbers
+2. Removed An Unused Module "Mock" (may come back in v4)
+3. Cleaned Up Injection Splash Screen
+4. Added "watch" command
+5. Added "steal" command
 ]]--
 loadstring(game:HttpGet("https://raw.githubusercontent.com/AltrixHacks/ALTRIX/master/App/latest.lua"))();
