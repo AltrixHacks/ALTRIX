@@ -1,34 +1,4 @@
---[[
-_____/\\\\\\\\\_____/\\\__________/\\\\\\\\\\\\\\\____/\\\\\\\\\______/\\\\\\\\\\\__/\\\_______/\\\_        
- ___/\\\\\\\\\\\\\__\/\\\_________\///////\\\/////___/\\\///////\\\___\/////\\\///__\///\\\___/\\\/__       
-  __/\\\/////////\\\_\/\\\_______________\/\\\_______\/\\\_____\/\\\_______\/\\\_______\///\\\\\\/____      
-   _\/\\\_______\/\\\_\/\\\_______________\/\\\_______\/\\\\\\\\\\\/________\/\\\_________\//\\\\______     
-    _\/\\\\\\\\\\\\\\\_\/\\\_______________\/\\\_______\/\\\//////\\\________\/\\\__________\/\\\\______    
-     _\/\\\/////////\\\_\/\\\_______________\/\\\_______\/\\\____\//\\\_______\/\\\__________/\\\\\\_____   
-      _\/\\\_______\/\\\_\/\\\_______________\/\\\_______\/\\\_____\//\\\______\/\\\________/\\\////\\\___  
-       _\/\\\_______\/\\\_\/\\\\\\\\\\\\\\\___\/\\\_______\/\\\______\//\\\__/\\\\\\\\\\\__/\\\/___\///\\\_ 
-        _\///________\///__\///////////////____\///________\///________\///__\///////////__\///_______\///__
-
-ALTRIX 3.2a:
-1. Added Automatic Updater
-
-ALTRIX 3.1a:
-1a. Compressed 32 Scripts Into 10
-1b. ALTRIX Should Run Quicker
-1c. More Room For More Scripts / Future Exploits!
-2. Added Back Splash Screen
-
-ALTRIX 3.0a:
-1. Organized Code Layout
-2. Redesigned whole UI to be modular
-3. Slimmed Header
-4. Removed Numbers In Header (Prevents Lag On Resource Intensive Games)
-5. Fully Integrated "ALTRIX V3 EMULATOR" because.... this is altrix V3
-5a. This includes lighting options
-6. Possibly Fixed A Few Anticheat Issues In Most Games
---]]
-
-local Altrix32 = Instance.new("ScreenGui")
+local Altrix33 = Instance.new("ScreenGui")
 local core = Instance.new("Folder")
 local Header = Instance.new("Frame")
 local ALTRIX = Instance.new("TextLabel")
@@ -58,6 +28,8 @@ local lighting = Instance.new("TextLabel")
 local notice = Instance.new("TextLabel")
 local _1keybind = Instance.new("TextLabel")
 local noclip_2 = Instance.new("TextLabel")
+local watch = Instance.new("TextLabel")
+local steal = Instance.new("TextLabel")
 local Close = Instance.new("TextButton")
 local Round = Instance.new("ImageLabel")
 local walkair = Instance.new("Folder")
@@ -67,41 +39,34 @@ local MenuContainer_3 = Instance.new("Frame")
 local walkair_2 = Instance.new("TextButton")
 local Close_2 = Instance.new("TextButton")
 local Round_2 = Instance.new("ImageLabel")
-local mock = Instance.new("Folder")
+local speed_2 = Instance.new("Folder")
 local Header_4 = Instance.new("Frame")
 local title_3 = Instance.new("TextLabel")
 local MenuContainer_4 = Instance.new("Frame")
-local m = Instance.new("TextButton")
-local Close_3 = Instance.new("TextButton")
-local Round_3 = Instance.new("ImageLabel")
-local speed_2 = Instance.new("Folder")
-local Header_5 = Instance.new("Frame")
-local title_4 = Instance.new("TextLabel")
-local MenuContainer_5 = Instance.new("Frame")
 local server = Instance.new("TextLabel")
 local client = Instance.new("TextLabel")
 local down = Instance.new("TextButton")
 local up = Instance.new("TextButton")
 local Lock = Instance.new("TextButton")
-local Close_4 = Instance.new("TextButton")
-local Round_4 = Instance.new("ImageLabel")
+local Close_3 = Instance.new("TextButton")
+local Round_3 = Instance.new("ImageLabel")
 local jump = Instance.new("Folder")
-local Header_6 = Instance.new("Frame")
-local title_5 = Instance.new("TextLabel")
-local MenuContainer_6 = Instance.new("Frame")
+local Header_5 = Instance.new("Frame")
+local title_4 = Instance.new("TextLabel")
+local MenuContainer_5 = Instance.new("Frame")
 local server_2 = Instance.new("TextLabel")
 local client_2 = Instance.new("TextLabel")
 local down_2 = Instance.new("TextButton")
 local up_2 = Instance.new("TextButton")
 local Lock_2 = Instance.new("TextButton")
+local Close_4 = Instance.new("TextButton")
+local Round_4 = Instance.new("ImageLabel")
+local games = Instance.new("Folder")
+local Header_6 = Instance.new("Frame")
+local title_5 = Instance.new("TextLabel")
 local Close_5 = Instance.new("TextButton")
 local Round_5 = Instance.new("ImageLabel")
-local games = Instance.new("Folder")
-local Header_7 = Instance.new("Frame")
-local title_6 = Instance.new("TextLabel")
-local Close_6 = Instance.new("TextButton")
-local Round_6 = Instance.new("ImageLabel")
-local MenuContainer_7 = Instance.new("ScrollingFrame")
+local MenuContainer_6 = Instance.new("ScrollingFrame")
 local ScrollingFrame_2 = Instance.new("ScrollingFrame")
 local UIGridLayout = Instance.new("UIGridLayout")
 local Reason2Die = Instance.new("Frame")
@@ -109,21 +74,21 @@ local Icon_2 = Instance.new("ImageButton")
 local Game = Instance.new("TextButton")
 local software_2 = Instance.new("Folder")
 local Reason2Die_2 = Instance.new("Folder")
-local Header_8 = Instance.new("Frame")
-local title_7 = Instance.new("TextLabel")
-local Close_7 = Instance.new("TextButton")
-local Round_7 = Instance.new("ImageLabel")
-local MenuContainer_8 = Instance.new("ScrollingFrame")
+local Header_7 = Instance.new("Frame")
+local title_6 = Instance.new("TextLabel")
+local Close_6 = Instance.new("TextButton")
+local Round_6 = Instance.new("ImageLabel")
+local MenuContainer_7 = Instance.new("ScrollingFrame")
 local Expand = Instance.new("TextButton")
-local Round_8 = Instance.new("ImageLabel")
-local title_8 = Instance.new("TextLabel")
+local Round_7 = Instance.new("ImageLabel")
+local title_7 = Instance.new("TextLabel")
 local size = Instance.new("TextBox")
 local transparency = Instance.new("TextBox")
 local subtitle = Instance.new("TextLabel")
 local lighting_2 = Instance.new("Folder")
-local Header_9 = Instance.new("Frame")
-local title_9 = Instance.new("TextLabel")
-local MenuContainer_9 = Instance.new("Frame")
+local Header_8 = Instance.new("Frame")
+local title_8 = Instance.new("TextLabel")
+local MenuContainer_8 = Instance.new("Frame")
 local Time = Instance.new("Frame")
 local Value = Instance.new("TextBox")
 local Setting = Instance.new("TextLabel")
@@ -145,22 +110,40 @@ local Brightness = Instance.new("Frame")
 local Value_5 = Instance.new("TextBox")
 local Setting_5 = Instance.new("TextLabel")
 local Apply_5 = Instance.new("TextButton")
+local Close_7 = Instance.new("TextButton")
+local Round_8 = Instance.new("ImageLabel")
+local yesclip = Instance.new("Folder")
+local Header_9 = Instance.new("Frame")
+local title_9 = Instance.new("TextLabel")
+local MenuContainer_9 = Instance.new("Frame")
+local walkair_3 = Instance.new("TextButton")
 local Close_8 = Instance.new("TextButton")
 local Round_9 = Instance.new("ImageLabel")
-local yesclip = Instance.new("Folder")
+local cliktp = Instance.new("Folder")
 local Header_10 = Instance.new("Frame")
 local title_10 = Instance.new("TextLabel")
 local MenuContainer_10 = Instance.new("Frame")
-local walkair_3 = Instance.new("TextButton")
+local walkair_4 = Instance.new("TextButton")
 local Close_9 = Instance.new("TextButton")
 local Round_10 = Instance.new("ImageLabel")
-local cliktp = Instance.new("Folder")
+local spectate = Instance.new("Folder")
 local Header_11 = Instance.new("Frame")
 local title_11 = Instance.new("TextLabel")
 local MenuContainer_11 = Instance.new("Frame")
-local walkair_4 = Instance.new("TextButton")
+local Bar = Instance.new("Frame")
+local Previous = Instance.new("TextButton")
+local Next = Instance.new("TextButton")
+local Title = Instance.new("TextLabel")
 local Close_10 = Instance.new("TextButton")
 local Round_11 = Instance.new("ImageLabel")
+local steal_2 = Instance.new("Folder")
+local Header_12 = Instance.new("Frame")
+local title_12 = Instance.new("TextLabel")
+local MenuContainer_12 = Instance.new("Frame")
+local uname = Instance.new("TextBox")
+local Execute = Instance.new("TextButton")
+local Close_11 = Instance.new("TextButton")
+local Round_12 = Instance.new("ImageLabel")
 local Inject = Instance.new("Frame")
 local Icon_3 = Instance.new("ImageLabel")
 local Lighter = Instance.new("Frame")
@@ -170,13 +153,13 @@ local InjectBG = Instance.new("ImageLabel")
 
 --Properties:
 
-Altrix32.Name = "Altrix (3.2)"
-Altrix32.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
-Altrix32.DisplayOrder = 999999999
-Altrix32.ResetOnSpawn = false
+Altrix33.Name = "Altrix (3.3)"
+Altrix33.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+Altrix33.DisplayOrder = 999999999
+Altrix33.ResetOnSpawn = false
 
 core.Name = "core"
-core.Parent = Altrix32
+core.Parent = Altrix33
 
 Header.Name = "Header"
 Header.Parent = core
@@ -232,7 +215,7 @@ VN.Position = UDim2.new(0.850000024, 0, 0, 0)
 VN.Size = UDim2.new(0.150000006, 0, 0.600000024, 0)
 VN.ZIndex = 5
 VN.Font = Enum.Font.SourceSansLight
-VN.Text = "V3.2"
+VN.Text = "V3.3"
 VN.TextColor3 = Color3.fromRGB(255, 255, 255)
 VN.TextScaled = true
 VN.TextSize = 15.000
@@ -250,7 +233,7 @@ corescripts.Name = "corescripts"
 corescripts.Parent = core
 
 etc.Name = "etc"
-etc.Parent = Altrix32
+etc.Parent = Altrix33
 
 help.Name = "help"
 help.Parent = etc
@@ -467,6 +450,30 @@ noclip_2.TextColor3 = Color3.fromRGB(255, 255, 255)
 noclip_2.TextSize = 14.000
 noclip_2.TextXAlignment = Enum.TextXAlignment.Left
 
+watch.Name = "watch"
+watch.Parent = ScrollingFrame
+watch.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+watch.BackgroundTransparency = 0.900
+watch.BorderSizePixel = 0
+watch.Size = UDim2.new(1, 0, 0, 25)
+watch.Font = Enum.Font.SourceSans
+watch.Text = "   watch   >   spectate another player"
+watch.TextColor3 = Color3.fromRGB(255, 255, 255)
+watch.TextSize = 14.000
+watch.TextXAlignment = Enum.TextXAlignment.Left
+
+steal.Name = "steal"
+steal.Parent = ScrollingFrame
+steal.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+steal.BackgroundTransparency = 0.900
+steal.BorderSizePixel = 0
+steal.Size = UDim2.new(1, 0, 0, 25)
+steal.Font = Enum.Font.SourceSans
+steal.Text = "   steal   >   take items from another player"
+steal.TextColor3 = Color3.fromRGB(255, 255, 255)
+steal.TextSize = 14.000
+steal.TextXAlignment = Enum.TextXAlignment.Left
+
 Close.Name = "Close"
 Close.Parent = Header_2
 Close.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -567,11 +574,11 @@ Round_2.ImageColor3 = Color3.fromRGB(91, 0, 0)
 Round_2.ScaleType = Enum.ScaleType.Slice
 Round_2.SliceCenter = Rect.new(100, 100, 100, 100)
 
-mock.Name = "mock"
-mock.Parent = etc
+speed_2.Name = "speed"
+speed_2.Parent = etc
 
 Header_4.Name = "Header"
-Header_4.Parent = mock
+Header_4.Parent = speed_2
 Header_4.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
 Header_4.BorderSizePixel = 0
 Header_4.Position = UDim2.new(0.5, -150, 0.25, -22)
@@ -588,7 +595,7 @@ title_3.Position = UDim2.new(0.25, 0, 0.099999994, 0)
 title_3.Size = UDim2.new(0.5, 0, 0.800000012, 0)
 title_3.ZIndex = 5
 title_3.Font = Enum.Font.SourceSansLight
-title_3.Text = "MOCK"
+title_3.Text = "SPEED"
 title_3.TextColor3 = Color3.fromRGB(255, 255, 255)
 title_3.TextSize = 50.000
 title_3.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
@@ -600,83 +607,10 @@ MenuContainer_4.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
 MenuContainer_4.BackgroundTransparency = 0.150
 MenuContainer_4.BorderSizePixel = 0
 MenuContainer_4.Position = UDim2.new(0, 0, 0, 45)
-MenuContainer_4.Size = UDim2.new(0, 300, 0, 50)
-
-m.Name = "m"
-m.Parent = MenuContainer_4
-m.BackgroundColor3 = Color3.fromRGB(80, 0, 0)
-m.BorderSizePixel = 0
-m.Position = UDim2.new(0.5, -62, 0.5, -17)
-m.Size = UDim2.new(0, 125, 0, 35)
-m.Font = Enum.Font.SourceSansBold
-m.Text = "Enable"
-m.TextColor3 = Color3.fromRGB(255, 255, 255)
-m.TextSize = 20.000
-
-Close_3.Name = "Close"
-Close_3.Parent = Header_4
-Close_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Close_3.BackgroundTransparency = 1.000
-Close_3.BorderSizePixel = 0
-Close_3.Position = UDim2.new(1, -50, 0.200000003, 0)
-Close_3.Size = UDim2.new(0, 40, 0, 15)
-Close_3.ZIndex = 2
-Close_3.Font = Enum.Font.SourceSans
-Close_3.Text = ""
-Close_3.TextColor3 = Color3.fromRGB(0, 0, 0)
-Close_3.TextSize = 14.000
-
-Round_3.Name = "Round"
-Round_3.Parent = Close_3
-Round_3.Active = true
-Round_3.AnchorPoint = Vector2.new(0.5, 0.5)
-Round_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Round_3.BackgroundTransparency = 1.000
-Round_3.Position = UDim2.new(0.5, 0, 0.5, 0)
-Round_3.Selectable = true
-Round_3.Size = UDim2.new(1, 0, 1, 0)
-Round_3.Image = "rbxassetid://3570695787"
-Round_3.ImageColor3 = Color3.fromRGB(91, 0, 0)
-Round_3.ScaleType = Enum.ScaleType.Slice
-Round_3.SliceCenter = Rect.new(100, 100, 100, 100)
-
-speed_2.Name = "speed"
-speed_2.Parent = etc
-
-Header_5.Name = "Header"
-Header_5.Parent = speed_2
-Header_5.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
-Header_5.BorderSizePixel = 0
-Header_5.Position = UDim2.new(0.5, -150, 0.25, -22)
-Header_5.Selectable = true
-Header_5.Size = UDim2.new(0, 300, 0, 45)
-Header_5.Visible = false
-
-title_4.Name = "title"
-title_4.Parent = Header_5
-title_4.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
-title_4.BackgroundTransparency = 1.000
-title_4.BorderSizePixel = 0
-title_4.Position = UDim2.new(0.25, 0, 0.099999994, 0)
-title_4.Size = UDim2.new(0.5, 0, 0.800000012, 0)
-title_4.ZIndex = 5
-title_4.Font = Enum.Font.SourceSansLight
-title_4.Text = "SPEED"
-title_4.TextColor3 = Color3.fromRGB(255, 255, 255)
-title_4.TextSize = 50.000
-title_4.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
-title_4.TextWrapped = true
-
-MenuContainer_5.Name = "MenuContainer"
-MenuContainer_5.Parent = Header_5
-MenuContainer_5.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-MenuContainer_5.BackgroundTransparency = 0.150
-MenuContainer_5.BorderSizePixel = 0
-MenuContainer_5.Position = UDim2.new(0, 0, 0, 45)
-MenuContainer_5.Size = UDim2.new(0, 300, 0, 125)
+MenuContainer_4.Size = UDim2.new(0, 300, 0, 125)
 
 server.Name = "server"
-server.Parent = MenuContainer_5
+server.Parent = MenuContainer_4
 server.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 server.BackgroundTransparency = 1.000
 server.BorderSizePixel = 0
@@ -688,7 +622,7 @@ server.TextColor3 = Color3.fromRGB(173, 173, 173)
 server.TextSize = 20.000
 
 client.Name = "client"
-client.Parent = MenuContainer_5
+client.Parent = MenuContainer_4
 client.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 client.BackgroundTransparency = 1.000
 client.BorderSizePixel = 0
@@ -724,7 +658,7 @@ up.TextColor3 = Color3.fromRGB(255, 255, 255)
 up.TextSize = 30.000
 
 Lock.Name = "Lock"
-Lock.Parent = MenuContainer_5
+Lock.Parent = MenuContainer_4
 Lock.BackgroundColor3 = Color3.fromRGB(80, 0, 0)
 Lock.BorderSizePixel = 0
 Lock.Position = UDim2.new(0.5, -62, 0, 75)
@@ -734,70 +668,70 @@ Lock.Text = "Lock"
 Lock.TextColor3 = Color3.fromRGB(255, 255, 255)
 Lock.TextSize = 20.000
 
-Close_4.Name = "Close"
-Close_4.Parent = Header_5
-Close_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Close_4.BackgroundTransparency = 1.000
-Close_4.BorderSizePixel = 0
-Close_4.Position = UDim2.new(1, -50, 0.200000003, 0)
-Close_4.Size = UDim2.new(0, 40, 0, 15)
-Close_4.ZIndex = 2
-Close_4.Font = Enum.Font.SourceSans
-Close_4.Text = ""
-Close_4.TextColor3 = Color3.fromRGB(0, 0, 0)
-Close_4.TextSize = 14.000
+Close_3.Name = "Close"
+Close_3.Parent = Header_4
+Close_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Close_3.BackgroundTransparency = 1.000
+Close_3.BorderSizePixel = 0
+Close_3.Position = UDim2.new(1, -50, 0.200000003, 0)
+Close_3.Size = UDim2.new(0, 40, 0, 15)
+Close_3.ZIndex = 2
+Close_3.Font = Enum.Font.SourceSans
+Close_3.Text = ""
+Close_3.TextColor3 = Color3.fromRGB(0, 0, 0)
+Close_3.TextSize = 14.000
 
-Round_4.Name = "Round"
-Round_4.Parent = Close_4
-Round_4.Active = true
-Round_4.AnchorPoint = Vector2.new(0.5, 0.5)
-Round_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Round_4.BackgroundTransparency = 1.000
-Round_4.Position = UDim2.new(0.5, 0, 0.5, 0)
-Round_4.Selectable = true
-Round_4.Size = UDim2.new(1, 0, 1, 0)
-Round_4.Image = "rbxassetid://3570695787"
-Round_4.ImageColor3 = Color3.fromRGB(91, 0, 0)
-Round_4.ScaleType = Enum.ScaleType.Slice
-Round_4.SliceCenter = Rect.new(100, 100, 100, 100)
+Round_3.Name = "Round"
+Round_3.Parent = Close_3
+Round_3.Active = true
+Round_3.AnchorPoint = Vector2.new(0.5, 0.5)
+Round_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Round_3.BackgroundTransparency = 1.000
+Round_3.Position = UDim2.new(0.5, 0, 0.5, 0)
+Round_3.Selectable = true
+Round_3.Size = UDim2.new(1, 0, 1, 0)
+Round_3.Image = "rbxassetid://3570695787"
+Round_3.ImageColor3 = Color3.fromRGB(91, 0, 0)
+Round_3.ScaleType = Enum.ScaleType.Slice
+Round_3.SliceCenter = Rect.new(100, 100, 100, 100)
 
 jump.Name = "jump"
 jump.Parent = etc
 
-Header_6.Name = "Header"
-Header_6.Parent = jump
-Header_6.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
-Header_6.BorderSizePixel = 0
-Header_6.Position = UDim2.new(0.5, -150, 0.25, -22)
-Header_6.Selectable = true
-Header_6.Size = UDim2.new(0, 300, 0, 45)
-Header_6.Visible = false
+Header_5.Name = "Header"
+Header_5.Parent = jump
+Header_5.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+Header_5.BorderSizePixel = 0
+Header_5.Position = UDim2.new(0.5, -150, 0.25, -22)
+Header_5.Selectable = true
+Header_5.Size = UDim2.new(0, 300, 0, 45)
+Header_5.Visible = false
 
-title_5.Name = "title"
-title_5.Parent = Header_6
-title_5.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
-title_5.BackgroundTransparency = 1.000
-title_5.BorderSizePixel = 0
-title_5.Position = UDim2.new(0.25, 0, 0.099999994, 0)
-title_5.Size = UDim2.new(0.5, 0, 0.800000012, 0)
-title_5.ZIndex = 5
-title_5.Font = Enum.Font.SourceSansLight
-title_5.Text = "JUMP"
-title_5.TextColor3 = Color3.fromRGB(255, 255, 255)
-title_5.TextSize = 50.000
-title_5.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
-title_5.TextWrapped = true
+title_4.Name = "title"
+title_4.Parent = Header_5
+title_4.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+title_4.BackgroundTransparency = 1.000
+title_4.BorderSizePixel = 0
+title_4.Position = UDim2.new(0.25, 0, 0.099999994, 0)
+title_4.Size = UDim2.new(0.5, 0, 0.800000012, 0)
+title_4.ZIndex = 5
+title_4.Font = Enum.Font.SourceSansLight
+title_4.Text = "JUMP"
+title_4.TextColor3 = Color3.fromRGB(255, 255, 255)
+title_4.TextSize = 50.000
+title_4.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
+title_4.TextWrapped = true
 
-MenuContainer_6.Name = "MenuContainer"
-MenuContainer_6.Parent = Header_6
-MenuContainer_6.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-MenuContainer_6.BackgroundTransparency = 0.150
-MenuContainer_6.BorderSizePixel = 0
-MenuContainer_6.Position = UDim2.new(0, 0, 0, 45)
-MenuContainer_6.Size = UDim2.new(0, 300, 0, 125)
+MenuContainer_5.Name = "MenuContainer"
+MenuContainer_5.Parent = Header_5
+MenuContainer_5.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+MenuContainer_5.BackgroundTransparency = 0.150
+MenuContainer_5.BorderSizePixel = 0
+MenuContainer_5.Position = UDim2.new(0, 0, 0, 45)
+MenuContainer_5.Size = UDim2.new(0, 300, 0, 125)
 
 server_2.Name = "server"
-server_2.Parent = MenuContainer_6
+server_2.Parent = MenuContainer_5
 server_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 server_2.BackgroundTransparency = 1.000
 server_2.BorderSizePixel = 0
@@ -809,7 +743,7 @@ server_2.TextColor3 = Color3.fromRGB(173, 173, 173)
 server_2.TextSize = 20.000
 
 client_2.Name = "client"
-client_2.Parent = MenuContainer_6
+client_2.Parent = MenuContainer_5
 client_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 client_2.BackgroundTransparency = 1.000
 client_2.BorderSizePixel = 0
@@ -845,7 +779,7 @@ up_2.TextColor3 = Color3.fromRGB(255, 255, 255)
 up_2.TextSize = 30.000
 
 Lock_2.Name = "Lock"
-Lock_2.Parent = MenuContainer_6
+Lock_2.Parent = MenuContainer_5
 Lock_2.BackgroundColor3 = Color3.fromRGB(80, 0, 0)
 Lock_2.BorderSizePixel = 0
 Lock_2.Position = UDim2.new(0.5, -62, 0, 75)
@@ -854,6 +788,60 @@ Lock_2.Font = Enum.Font.SourceSansBold
 Lock_2.Text = "Lock"
 Lock_2.TextColor3 = Color3.fromRGB(255, 255, 255)
 Lock_2.TextSize = 20.000
+
+Close_4.Name = "Close"
+Close_4.Parent = Header_5
+Close_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Close_4.BackgroundTransparency = 1.000
+Close_4.BorderSizePixel = 0
+Close_4.Position = UDim2.new(1, -50, 0.200000003, 0)
+Close_4.Size = UDim2.new(0, 40, 0, 15)
+Close_4.ZIndex = 2
+Close_4.Font = Enum.Font.SourceSans
+Close_4.Text = ""
+Close_4.TextColor3 = Color3.fromRGB(0, 0, 0)
+Close_4.TextSize = 14.000
+
+Round_4.Name = "Round"
+Round_4.Parent = Close_4
+Round_4.Active = true
+Round_4.AnchorPoint = Vector2.new(0.5, 0.5)
+Round_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Round_4.BackgroundTransparency = 1.000
+Round_4.Position = UDim2.new(0.5, 0, 0.5, 0)
+Round_4.Selectable = true
+Round_4.Size = UDim2.new(1, 0, 1, 0)
+Round_4.Image = "rbxassetid://3570695787"
+Round_4.ImageColor3 = Color3.fromRGB(91, 0, 0)
+Round_4.ScaleType = Enum.ScaleType.Slice
+Round_4.SliceCenter = Rect.new(100, 100, 100, 100)
+
+games.Name = "games"
+games.Parent = etc
+
+Header_6.Name = "Header"
+Header_6.Parent = games
+Header_6.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+Header_6.BorderSizePixel = 0
+Header_6.Position = UDim2.new(0.5, -225, 0.25, -22)
+Header_6.Selectable = true
+Header_6.Size = UDim2.new(0, 450, 0, 45)
+Header_6.Visible = false
+
+title_5.Name = "title"
+title_5.Parent = Header_6
+title_5.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+title_5.BackgroundTransparency = 1.000
+title_5.BorderSizePixel = 0
+title_5.Position = UDim2.new(0.099999994, 0, 0.099999994, 0)
+title_5.Size = UDim2.new(0.800000012, 0, 0.800000012, 0)
+title_5.ZIndex = 5
+title_5.Font = Enum.Font.SourceSansLight
+title_5.Text = "SOFTWARE"
+title_5.TextColor3 = Color3.fromRGB(255, 255, 255)
+title_5.TextSize = 50.000
+title_5.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
+title_5.TextWrapped = true
 
 Close_5.Name = "Close"
 Close_5.Parent = Header_6
@@ -882,70 +870,16 @@ Round_5.ImageColor3 = Color3.fromRGB(91, 0, 0)
 Round_5.ScaleType = Enum.ScaleType.Slice
 Round_5.SliceCenter = Rect.new(100, 100, 100, 100)
 
-games.Name = "games"
-games.Parent = etc
+MenuContainer_6.Name = "MenuContainer"
+MenuContainer_6.Parent = Header_6
+MenuContainer_6.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+MenuContainer_6.BackgroundTransparency = 0.150
+MenuContainer_6.BorderSizePixel = 0
+MenuContainer_6.Position = UDim2.new(0, 0, 0, 45)
+MenuContainer_6.Size = UDim2.new(1, 0, 0, 250)
+MenuContainer_6.ScrollBarThickness = 5
 
-Header_7.Name = "Header"
-Header_7.Parent = games
-Header_7.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
-Header_7.BorderSizePixel = 0
-Header_7.Position = UDim2.new(0.5, -225, 0.25, -22)
-Header_7.Selectable = true
-Header_7.Size = UDim2.new(0, 450, 0, 45)
-Header_7.Visible = false
-
-title_6.Name = "title"
-title_6.Parent = Header_7
-title_6.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
-title_6.BackgroundTransparency = 1.000
-title_6.BorderSizePixel = 0
-title_6.Position = UDim2.new(0.099999994, 0, 0.099999994, 0)
-title_6.Size = UDim2.new(0.800000012, 0, 0.800000012, 0)
-title_6.ZIndex = 5
-title_6.Font = Enum.Font.SourceSansLight
-title_6.Text = "SOFTWARE"
-title_6.TextColor3 = Color3.fromRGB(255, 255, 255)
-title_6.TextSize = 50.000
-title_6.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
-title_6.TextWrapped = true
-
-Close_6.Name = "Close"
-Close_6.Parent = Header_7
-Close_6.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Close_6.BackgroundTransparency = 1.000
-Close_6.BorderSizePixel = 0
-Close_6.Position = UDim2.new(1, -50, 0.200000003, 0)
-Close_6.Size = UDim2.new(0, 40, 0, 15)
-Close_6.ZIndex = 2
-Close_6.Font = Enum.Font.SourceSans
-Close_6.Text = ""
-Close_6.TextColor3 = Color3.fromRGB(0, 0, 0)
-Close_6.TextSize = 14.000
-
-Round_6.Name = "Round"
-Round_6.Parent = Close_6
-Round_6.Active = true
-Round_6.AnchorPoint = Vector2.new(0.5, 0.5)
-Round_6.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Round_6.BackgroundTransparency = 1.000
-Round_6.Position = UDim2.new(0.5, 0, 0.5, 0)
-Round_6.Selectable = true
-Round_6.Size = UDim2.new(1, 0, 1, 0)
-Round_6.Image = "rbxassetid://3570695787"
-Round_6.ImageColor3 = Color3.fromRGB(91, 0, 0)
-Round_6.ScaleType = Enum.ScaleType.Slice
-Round_6.SliceCenter = Rect.new(100, 100, 100, 100)
-
-MenuContainer_7.Name = "MenuContainer"
-MenuContainer_7.Parent = Header_7
-MenuContainer_7.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-MenuContainer_7.BackgroundTransparency = 0.150
-MenuContainer_7.BorderSizePixel = 0
-MenuContainer_7.Position = UDim2.new(0, 0, 0, 45)
-MenuContainer_7.Size = UDim2.new(1, 0, 0, 250)
-MenuContainer_7.ScrollBarThickness = 5
-
-ScrollingFrame_2.Parent = MenuContainer_7
+ScrollingFrame_2.Parent = MenuContainer_6
 ScrollingFrame_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 ScrollingFrame_2.BackgroundTransparency = 1.000
 ScrollingFrame_2.BorderSizePixel = 0
@@ -991,68 +925,68 @@ software_2.Parent = games
 Reason2Die_2.Name = "Reason2Die"
 Reason2Die_2.Parent = software_2
 
-Header_8.Name = "Header"
-Header_8.Parent = Reason2Die_2
-Header_8.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
-Header_8.BorderSizePixel = 0
-Header_8.Position = UDim2.new(0.5, -225, 0.25, -22)
-Header_8.Selectable = true
-Header_8.Size = UDim2.new(0, 450, 0, 45)
-Header_8.Visible = false
+Header_7.Name = "Header"
+Header_7.Parent = Reason2Die_2
+Header_7.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+Header_7.BorderSizePixel = 0
+Header_7.Position = UDim2.new(0.5, -225, 0.25, -22)
+Header_7.Selectable = true
+Header_7.Size = UDim2.new(0, 450, 0, 45)
+Header_7.Visible = false
 
-title_7.Name = "title"
-title_7.Parent = Header_8
-title_7.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
-title_7.BackgroundTransparency = 1.000
-title_7.BorderSizePixel = 0
-title_7.Position = UDim2.new(0.099999994, 0, 0.099999994, 0)
-title_7.Size = UDim2.new(0.800000012, 0, 0.800000012, 0)
-title_7.ZIndex = 5
-title_7.Font = Enum.Font.SourceSansLight
-title_7.Text = "R2DA"
-title_7.TextColor3 = Color3.fromRGB(255, 255, 255)
-title_7.TextSize = 50.000
-title_7.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
-title_7.TextWrapped = true
+title_6.Name = "title"
+title_6.Parent = Header_7
+title_6.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+title_6.BackgroundTransparency = 1.000
+title_6.BorderSizePixel = 0
+title_6.Position = UDim2.new(0.099999994, 0, 0.099999994, 0)
+title_6.Size = UDim2.new(0.800000012, 0, 0.800000012, 0)
+title_6.ZIndex = 5
+title_6.Font = Enum.Font.SourceSansLight
+title_6.Text = "R2DA"
+title_6.TextColor3 = Color3.fromRGB(255, 255, 255)
+title_6.TextSize = 50.000
+title_6.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
+title_6.TextWrapped = true
 
-Close_7.Name = "Close"
-Close_7.Parent = Header_8
-Close_7.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Close_7.BackgroundTransparency = 1.000
-Close_7.BorderSizePixel = 0
-Close_7.Position = UDim2.new(1, -50, 0.200000003, 0)
-Close_7.Size = UDim2.new(0, 40, 0, 15)
-Close_7.ZIndex = 2
-Close_7.Font = Enum.Font.SourceSans
-Close_7.Text = ""
-Close_7.TextColor3 = Color3.fromRGB(0, 0, 0)
-Close_7.TextSize = 14.000
+Close_6.Name = "Close"
+Close_6.Parent = Header_7
+Close_6.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Close_6.BackgroundTransparency = 1.000
+Close_6.BorderSizePixel = 0
+Close_6.Position = UDim2.new(1, -50, 0.200000003, 0)
+Close_6.Size = UDim2.new(0, 40, 0, 15)
+Close_6.ZIndex = 2
+Close_6.Font = Enum.Font.SourceSans
+Close_6.Text = ""
+Close_6.TextColor3 = Color3.fromRGB(0, 0, 0)
+Close_6.TextSize = 14.000
 
-Round_7.Name = "Round"
-Round_7.Parent = Close_7
-Round_7.Active = true
-Round_7.AnchorPoint = Vector2.new(0.5, 0.5)
-Round_7.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Round_7.BackgroundTransparency = 1.000
-Round_7.Position = UDim2.new(0.5, 0, 0.5, 0)
-Round_7.Selectable = true
-Round_7.Size = UDim2.new(1, 0, 1, 0)
-Round_7.Image = "rbxassetid://3570695787"
-Round_7.ImageColor3 = Color3.fromRGB(91, 0, 0)
-Round_7.ScaleType = Enum.ScaleType.Slice
-Round_7.SliceCenter = Rect.new(100, 100, 100, 100)
+Round_6.Name = "Round"
+Round_6.Parent = Close_6
+Round_6.Active = true
+Round_6.AnchorPoint = Vector2.new(0.5, 0.5)
+Round_6.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Round_6.BackgroundTransparency = 1.000
+Round_6.Position = UDim2.new(0.5, 0, 0.5, 0)
+Round_6.Selectable = true
+Round_6.Size = UDim2.new(1, 0, 1, 0)
+Round_6.Image = "rbxassetid://3570695787"
+Round_6.ImageColor3 = Color3.fromRGB(91, 0, 0)
+Round_6.ScaleType = Enum.ScaleType.Slice
+Round_6.SliceCenter = Rect.new(100, 100, 100, 100)
 
-MenuContainer_8.Name = "MenuContainer"
-MenuContainer_8.Parent = Header_8
-MenuContainer_8.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-MenuContainer_8.BackgroundTransparency = 0.150
-MenuContainer_8.BorderSizePixel = 0
-MenuContainer_8.Position = UDim2.new(0, 0, 0, 45)
-MenuContainer_8.Size = UDim2.new(1, 0, 0, 250)
-MenuContainer_8.ScrollBarThickness = 5
+MenuContainer_7.Name = "MenuContainer"
+MenuContainer_7.Parent = Header_7
+MenuContainer_7.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+MenuContainer_7.BackgroundTransparency = 0.150
+MenuContainer_7.BorderSizePixel = 0
+MenuContainer_7.Position = UDim2.new(0, 0, 0, 45)
+MenuContainer_7.Size = UDim2.new(1, 0, 0, 250)
+MenuContainer_7.ScrollBarThickness = 5
 
 Expand.Name = "Expand"
-Expand.Parent = MenuContainer_8
+Expand.Parent = MenuContainer_7
 Expand.BackgroundColor3 = Color3.fromRGB(50, 100, 250)
 Expand.BackgroundTransparency = 1.000
 Expand.BorderSizePixel = 0
@@ -1064,34 +998,34 @@ Expand.Text = "Expand"
 Expand.TextColor3 = Color3.fromRGB(255, 255, 255)
 Expand.TextSize = 20.000
 
-Round_8.Name = "Round"
-Round_8.Parent = Expand
-Round_8.Active = true
-Round_8.AnchorPoint = Vector2.new(0.5, 0.5)
-Round_8.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Round_8.BackgroundTransparency = 1.000
-Round_8.Position = UDim2.new(0.5, 0, 0.5, 0)
-Round_8.Selectable = true
-Round_8.Size = UDim2.new(1, 0, 1, 0)
-Round_8.Image = "rbxassetid://3570695787"
-Round_8.ImageColor3 = Color3.fromRGB(50, 100, 250)
-Round_8.ScaleType = Enum.ScaleType.Slice
-Round_8.SliceCenter = Rect.new(100, 100, 100, 100)
+Round_7.Name = "Round"
+Round_7.Parent = Expand
+Round_7.Active = true
+Round_7.AnchorPoint = Vector2.new(0.5, 0.5)
+Round_7.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Round_7.BackgroundTransparency = 1.000
+Round_7.Position = UDim2.new(0.5, 0, 0.5, 0)
+Round_7.Selectable = true
+Round_7.Size = UDim2.new(1, 0, 1, 0)
+Round_7.Image = "rbxassetid://3570695787"
+Round_7.ImageColor3 = Color3.fromRGB(50, 100, 250)
+Round_7.ScaleType = Enum.ScaleType.Slice
+Round_7.SliceCenter = Rect.new(100, 100, 100, 100)
 
-title_8.Name = "title"
-title_8.Parent = MenuContainer_8
-title_8.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-title_8.BackgroundTransparency = 1.000
-title_8.BorderSizePixel = 0
-title_8.Position = UDim2.new(0.5, -100, 0, 0)
-title_8.Size = UDim2.new(0, 200, 0, 30)
-title_8.Font = Enum.Font.SourceSans
-title_8.Text = "Hitbox Expander:"
-title_8.TextColor3 = Color3.fromRGB(255, 255, 255)
-title_8.TextSize = 20.000
+title_7.Name = "title"
+title_7.Parent = MenuContainer_7
+title_7.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+title_7.BackgroundTransparency = 1.000
+title_7.BorderSizePixel = 0
+title_7.Position = UDim2.new(0.5, -100, 0, 0)
+title_7.Size = UDim2.new(0, 200, 0, 30)
+title_7.Font = Enum.Font.SourceSans
+title_7.Text = "Hitbox Expander:"
+title_7.TextColor3 = Color3.fromRGB(255, 255, 255)
+title_7.TextSize = 20.000
 
 size.Name = "size"
-size.Parent = MenuContainer_8
+size.Parent = MenuContainer_7
 size.BackgroundColor3 = Color3.fromRGB(179, 0, 255)
 size.BackgroundTransparency = 0.750
 size.BorderSizePixel = 0
@@ -1105,7 +1039,7 @@ size.TextColor3 = Color3.fromRGB(255, 255, 255)
 size.TextSize = 20.000
 
 transparency.Name = "transparency"
-transparency.Parent = MenuContainer_8
+transparency.Parent = MenuContainer_7
 transparency.BackgroundColor3 = Color3.fromRGB(179, 0, 255)
 transparency.BackgroundTransparency = 0.750
 transparency.BorderSizePixel = 0
@@ -1119,7 +1053,7 @@ transparency.TextColor3 = Color3.fromRGB(255, 255, 255)
 transparency.TextSize = 20.000
 
 subtitle.Name = "subtitle"
-subtitle.Parent = Header_8
+subtitle.Parent = Header_7
 subtitle.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
 subtitle.BackgroundTransparency = 1.000
 subtitle.BorderSizePixel = 0
@@ -1136,40 +1070,40 @@ subtitle.TextWrapped = true
 lighting_2.Name = "lighting"
 lighting_2.Parent = etc
 
-Header_9.Name = "Header"
-Header_9.Parent = lighting_2
-Header_9.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
-Header_9.BorderSizePixel = 0
-Header_9.Position = UDim2.new(0.5, -150, 0.25, -22)
-Header_9.Selectable = true
-Header_9.Size = UDim2.new(0, 300, 0, 45)
-Header_9.Visible = false
+Header_8.Name = "Header"
+Header_8.Parent = lighting_2
+Header_8.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+Header_8.BorderSizePixel = 0
+Header_8.Position = UDim2.new(0.5, -150, 0.25, -22)
+Header_8.Selectable = true
+Header_8.Size = UDim2.new(0, 300, 0, 45)
+Header_8.Visible = false
 
-title_9.Name = "title"
-title_9.Parent = Header_9
-title_9.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
-title_9.BackgroundTransparency = 1.000
-title_9.BorderSizePixel = 0
-title_9.Position = UDim2.new(0.150000006, 0, 0.099999994, 0)
-title_9.Size = UDim2.new(0.699999988, 0, 0.800000012, 0)
-title_9.ZIndex = 5
-title_9.Font = Enum.Font.SourceSansLight
-title_9.Text = "LIGHTING"
-title_9.TextColor3 = Color3.fromRGB(255, 255, 255)
-title_9.TextSize = 50.000
-title_9.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
-title_9.TextWrapped = true
+title_8.Name = "title"
+title_8.Parent = Header_8
+title_8.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+title_8.BackgroundTransparency = 1.000
+title_8.BorderSizePixel = 0
+title_8.Position = UDim2.new(0.150000006, 0, 0.099999994, 0)
+title_8.Size = UDim2.new(0.699999988, 0, 0.800000012, 0)
+title_8.ZIndex = 5
+title_8.Font = Enum.Font.SourceSansLight
+title_8.Text = "LIGHTING"
+title_8.TextColor3 = Color3.fromRGB(255, 255, 255)
+title_8.TextSize = 50.000
+title_8.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
+title_8.TextWrapped = true
 
-MenuContainer_9.Name = "MenuContainer"
-MenuContainer_9.Parent = Header_9
-MenuContainer_9.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-MenuContainer_9.BackgroundTransparency = 0.150
-MenuContainer_9.BorderSizePixel = 0
-MenuContainer_9.Position = UDim2.new(0, 0, 0, 45)
-MenuContainer_9.Size = UDim2.new(0, 300, 0, 300)
+MenuContainer_8.Name = "MenuContainer"
+MenuContainer_8.Parent = Header_8
+MenuContainer_8.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+MenuContainer_8.BackgroundTransparency = 0.150
+MenuContainer_8.BorderSizePixel = 0
+MenuContainer_8.Position = UDim2.new(0, 0, 0, 45)
+MenuContainer_8.Size = UDim2.new(0, 300, 0, 300)
 
 Time.Name = "Time"
-Time.Parent = MenuContainer_9
+Time.Parent = MenuContainer_8
 Time.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Time.BackgroundTransparency = 1.000
 Time.BorderSizePixel = 0
@@ -1212,7 +1146,7 @@ Apply.TextColor3 = Color3.fromRGB(255, 255, 255)
 Apply.TextSize = 14.000
 
 FogStart.Name = "FogStart"
-FogStart.Parent = MenuContainer_9
+FogStart.Parent = MenuContainer_8
 FogStart.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 FogStart.BackgroundTransparency = 1.000
 FogStart.BorderSizePixel = 0
@@ -1255,7 +1189,7 @@ Value_2.TextColor3 = Color3.fromRGB(255, 255, 255)
 Value_2.TextSize = 20.000
 
 FogEnd.Name = "FogEnd"
-FogEnd.Parent = MenuContainer_9
+FogEnd.Parent = MenuContainer_8
 FogEnd.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 FogEnd.BackgroundTransparency = 1.000
 FogEnd.BorderSizePixel = 0
@@ -1298,7 +1232,7 @@ Apply_3.TextColor3 = Color3.fromRGB(255, 255, 255)
 Apply_3.TextSize = 14.000
 
 Exposure.Name = "Exposure"
-Exposure.Parent = MenuContainer_9
+Exposure.Parent = MenuContainer_8
 Exposure.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Exposure.BackgroundTransparency = 1.000
 Exposure.BorderSizePixel = 0
@@ -1340,12 +1274,12 @@ Apply_4.Text = "Apply"
 Apply_4.TextColor3 = Color3.fromRGB(255, 255, 255)
 Apply_4.TextSize = 14.000
 
-UIListLayout_2.Parent = MenuContainer_9
+UIListLayout_2.Parent = MenuContainer_8
 UIListLayout_2.SortOrder = Enum.SortOrder.LayoutOrder
 UIListLayout_2.Padding = UDim.new(0, 2)
 
 Brightness.Name = "Brightness"
-Brightness.Parent = MenuContainer_9
+Brightness.Parent = MenuContainer_8
 Brightness.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Brightness.BackgroundTransparency = 1.000
 Brightness.BorderSizePixel = 0
@@ -1387,6 +1321,79 @@ Apply_5.Text = "Apply"
 Apply_5.TextColor3 = Color3.fromRGB(255, 255, 255)
 Apply_5.TextSize = 14.000
 
+Close_7.Name = "Close"
+Close_7.Parent = Header_8
+Close_7.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Close_7.BackgroundTransparency = 1.000
+Close_7.BorderSizePixel = 0
+Close_7.Position = UDim2.new(1, -50, 0.200000003, 0)
+Close_7.Size = UDim2.new(0, 40, 0, 15)
+Close_7.ZIndex = 2
+Close_7.Font = Enum.Font.SourceSans
+Close_7.Text = ""
+Close_7.TextColor3 = Color3.fromRGB(0, 0, 0)
+Close_7.TextSize = 14.000
+
+Round_8.Name = "Round"
+Round_8.Parent = Close_7
+Round_8.Active = true
+Round_8.AnchorPoint = Vector2.new(0.5, 0.5)
+Round_8.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Round_8.BackgroundTransparency = 1.000
+Round_8.Position = UDim2.new(0.5, 0, 0.5, 0)
+Round_8.Selectable = true
+Round_8.Size = UDim2.new(1, 0, 1, 0)
+Round_8.Image = "rbxassetid://3570695787"
+Round_8.ImageColor3 = Color3.fromRGB(91, 0, 0)
+Round_8.ScaleType = Enum.ScaleType.Slice
+Round_8.SliceCenter = Rect.new(100, 100, 100, 100)
+
+yesclip.Name = "yesclip"
+yesclip.Parent = etc
+
+Header_9.Name = "Header"
+Header_9.Parent = yesclip
+Header_9.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+Header_9.BorderSizePixel = 0
+Header_9.Position = UDim2.new(0.5, -150, 0.25, -22)
+Header_9.Selectable = true
+Header_9.Size = UDim2.new(0, 300, 0, 45)
+Header_9.Visible = false
+
+title_9.Name = "title"
+title_9.Parent = Header_9
+title_9.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+title_9.BackgroundTransparency = 1.000
+title_9.BorderSizePixel = 0
+title_9.Position = UDim2.new(0.25, 0, 0.099999994, 0)
+title_9.Size = UDim2.new(0.5, 0, 0.800000012, 0)
+title_9.ZIndex = 5
+title_9.Font = Enum.Font.SourceSansLight
+title_9.Text = "NOCLIP"
+title_9.TextColor3 = Color3.fromRGB(255, 255, 255)
+title_9.TextSize = 50.000
+title_9.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
+title_9.TextWrapped = true
+
+MenuContainer_9.Name = "MenuContainer"
+MenuContainer_9.Parent = Header_9
+MenuContainer_9.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+MenuContainer_9.BackgroundTransparency = 0.150
+MenuContainer_9.BorderSizePixel = 0
+MenuContainer_9.Position = UDim2.new(0, 0, 0, 45)
+MenuContainer_9.Size = UDim2.new(0, 300, 0, 50)
+
+walkair_3.Name = "walkair"
+walkair_3.Parent = MenuContainer_9
+walkair_3.BackgroundColor3 = Color3.fromRGB(80, 0, 0)
+walkair_3.BorderSizePixel = 0
+walkair_3.Position = UDim2.new(0.5, -62, 0.5, -17)
+walkair_3.Size = UDim2.new(0, 125, 0, 35)
+walkair_3.Font = Enum.Font.SourceSansBold
+walkair_3.Text = "Enable"
+walkair_3.TextColor3 = Color3.fromRGB(255, 255, 255)
+walkair_3.TextSize = 20.000
+
 Close_8.Name = "Close"
 Close_8.Parent = Header_9
 Close_8.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -1414,11 +1421,11 @@ Round_9.ImageColor3 = Color3.fromRGB(91, 0, 0)
 Round_9.ScaleType = Enum.ScaleType.Slice
 Round_9.SliceCenter = Rect.new(100, 100, 100, 100)
 
-yesclip.Name = "yesclip"
-yesclip.Parent = etc
+cliktp.Name = "cliktp"
+cliktp.Parent = etc
 
 Header_10.Name = "Header"
-Header_10.Parent = yesclip
+Header_10.Parent = cliktp
 Header_10.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
 Header_10.BorderSizePixel = 0
 Header_10.Position = UDim2.new(0.5, -150, 0.25, -22)
@@ -1435,7 +1442,7 @@ title_10.Position = UDim2.new(0.25, 0, 0.099999994, 0)
 title_10.Size = UDim2.new(0.5, 0, 0.800000012, 0)
 title_10.ZIndex = 5
 title_10.Font = Enum.Font.SourceSansLight
-title_10.Text = "NOCLIP"
+title_10.Text = "CLICK TP"
 title_10.TextColor3 = Color3.fromRGB(255, 255, 255)
 title_10.TextSize = 50.000
 title_10.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
@@ -1449,16 +1456,16 @@ MenuContainer_10.BorderSizePixel = 0
 MenuContainer_10.Position = UDim2.new(0, 0, 0, 45)
 MenuContainer_10.Size = UDim2.new(0, 300, 0, 50)
 
-walkair_3.Name = "walkair"
-walkair_3.Parent = MenuContainer_10
-walkair_3.BackgroundColor3 = Color3.fromRGB(80, 0, 0)
-walkair_3.BorderSizePixel = 0
-walkair_3.Position = UDim2.new(0.5, -62, 0.5, -17)
-walkair_3.Size = UDim2.new(0, 125, 0, 35)
-walkair_3.Font = Enum.Font.SourceSansBold
-walkair_3.Text = "Enable"
-walkair_3.TextColor3 = Color3.fromRGB(255, 255, 255)
-walkair_3.TextSize = 20.000
+walkair_4.Name = "walkair"
+walkair_4.Parent = MenuContainer_10
+walkair_4.BackgroundColor3 = Color3.fromRGB(80, 0, 0)
+walkair_4.BorderSizePixel = 0
+walkair_4.Position = UDim2.new(0.5, -62, 0.5, -17)
+walkair_4.Size = UDim2.new(0, 125, 0, 35)
+walkair_4.Font = Enum.Font.SourceSansBold
+walkair_4.Text = "Enable"
+walkair_4.TextColor3 = Color3.fromRGB(255, 255, 255)
+walkair_4.TextSize = 20.000
 
 Close_9.Name = "Close"
 Close_9.Parent = Header_10
@@ -1487,11 +1494,11 @@ Round_10.ImageColor3 = Color3.fromRGB(91, 0, 0)
 Round_10.ScaleType = Enum.ScaleType.Slice
 Round_10.SliceCenter = Rect.new(100, 100, 100, 100)
 
-cliktp.Name = "cliktp"
-cliktp.Parent = etc
+spectate.Name = "spectate"
+spectate.Parent = etc
 
 Header_11.Name = "Header"
-Header_11.Parent = cliktp
+Header_11.Parent = spectate
 Header_11.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
 Header_11.BorderSizePixel = 0
 Header_11.Position = UDim2.new(0.5, -150, 0.25, -22)
@@ -1508,7 +1515,7 @@ title_11.Position = UDim2.new(0.25, 0, 0.099999994, 0)
 title_11.Size = UDim2.new(0.5, 0, 0.800000012, 0)
 title_11.ZIndex = 5
 title_11.Font = Enum.Font.SourceSansLight
-title_11.Text = "CLICK TP"
+title_11.Text = "WATCH"
 title_11.TextColor3 = Color3.fromRGB(255, 255, 255)
 title_11.TextSize = 50.000
 title_11.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
@@ -1522,16 +1529,48 @@ MenuContainer_11.BorderSizePixel = 0
 MenuContainer_11.Position = UDim2.new(0, 0, 0, 45)
 MenuContainer_11.Size = UDim2.new(0, 300, 0, 50)
 
-walkair_4.Name = "walkair"
-walkair_4.Parent = MenuContainer_11
-walkair_4.BackgroundColor3 = Color3.fromRGB(80, 0, 0)
-walkair_4.BorderSizePixel = 0
-walkair_4.Position = UDim2.new(0.5, -62, 0.5, -17)
-walkair_4.Size = UDim2.new(0, 125, 0, 35)
-walkair_4.Font = Enum.Font.SourceSansBold
-walkair_4.Text = "Enable"
-walkair_4.TextColor3 = Color3.fromRGB(255, 255, 255)
-walkair_4.TextSize = 20.000
+Bar.Name = "Bar"
+Bar.Parent = MenuContainer_11
+Bar.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Bar.BackgroundTransparency = 1.000
+Bar.BorderSizePixel = 0
+Bar.Size = UDim2.new(1, 0, 1, 0)
+
+Previous.Name = "Previous"
+Previous.Parent = Bar
+Previous.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+Previous.BorderColor3 = Color3.fromRGB(130, 203, 255)
+Previous.BorderSizePixel = 0
+Previous.Size = UDim2.new(0.150000006, 0, 1, 0)
+Previous.Font = Enum.Font.SourceSans
+Previous.Text = "<"
+Previous.TextColor3 = Color3.fromRGB(255, 255, 255)
+Previous.TextSize = 48.000
+
+Next.Name = "Next"
+Next.Parent = Bar
+Next.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+Next.BorderColor3 = Color3.fromRGB(130, 203, 255)
+Next.BorderSizePixel = 0
+Next.Position = UDim2.new(1, 0, 0, 0)
+Next.Size = UDim2.new(-0.150000006, 0, 1, 0)
+Next.Font = Enum.Font.SourceSans
+Next.Text = ">"
+Next.TextColor3 = Color3.fromRGB(255, 255, 255)
+Next.TextSize = 48.000
+
+Title.Name = "Title"
+Title.Parent = Bar
+Title.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Title.BackgroundTransparency = 1.000
+Title.Position = UDim2.new(0.175000012, 0, 0, 0)
+Title.Size = UDim2.new(0.649999976, 0, 1, 0)
+Title.Font = Enum.Font.SourceSans
+Title.Text = ""
+Title.TextColor3 = Color3.fromRGB(255, 255, 255)
+Title.TextScaled = true
+Title.TextSize = 14.000
+Title.TextWrapped = true
 
 Close_10.Name = "Close"
 Close_10.Parent = Header_11
@@ -1560,8 +1599,93 @@ Round_11.ImageColor3 = Color3.fromRGB(91, 0, 0)
 Round_11.ScaleType = Enum.ScaleType.Slice
 Round_11.SliceCenter = Rect.new(100, 100, 100, 100)
 
+steal_2.Name = "steal"
+steal_2.Parent = etc
+
+Header_12.Name = "Header"
+Header_12.Parent = steal_2
+Header_12.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+Header_12.BorderSizePixel = 0
+Header_12.Position = UDim2.new(0.5, -150, 0.25, -22)
+Header_12.Selectable = true
+Header_12.Size = UDim2.new(0, 300, 0, 45)
+Header_12.Visible = false
+
+title_12.Name = "title"
+title_12.Parent = Header_12
+title_12.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+title_12.BackgroundTransparency = 1.000
+title_12.BorderSizePixel = 0
+title_12.Position = UDim2.new(0.25, 0, 0.099999994, 0)
+title_12.Size = UDim2.new(0.5, 0, 0.800000012, 0)
+title_12.ZIndex = 5
+title_12.Font = Enum.Font.SourceSansLight
+title_12.Text = "STEAL"
+title_12.TextColor3 = Color3.fromRGB(255, 255, 255)
+title_12.TextSize = 50.000
+title_12.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
+title_12.TextWrapped = true
+
+MenuContainer_12.Name = "MenuContainer"
+MenuContainer_12.Parent = Header_12
+MenuContainer_12.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+MenuContainer_12.BackgroundTransparency = 0.150
+MenuContainer_12.BorderSizePixel = 0
+MenuContainer_12.Position = UDim2.new(0, 0, 0, 45)
+MenuContainer_12.Size = UDim2.new(0, 300, 0, 50)
+
+uname.Name = "uname"
+uname.Parent = MenuContainer_12
+uname.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+uname.BackgroundTransparency = 1.000
+uname.BorderSizePixel = 0
+uname.Size = UDim2.new(0, 250, 0, 50)
+uname.Font = Enum.Font.SourceSans
+uname.PlaceholderText = "Player To Steal From"
+uname.Text = ""
+uname.TextColor3 = Color3.fromRGB(255, 255, 255)
+uname.TextSize = 20.000
+
+Execute.Name = "Execute"
+Execute.Parent = MenuContainer_12
+Execute.BackgroundColor3 = Color3.fromRGB(0, 100, 0)
+Execute.BorderSizePixel = 0
+Execute.Position = UDim2.new(1, -50, 0, 0)
+Execute.Size = UDim2.new(0, 50, 0, 50)
+Execute.Font = Enum.Font.SourceSans
+Execute.Text = "STEAL"
+Execute.TextColor3 = Color3.fromRGB(255, 255, 255)
+Execute.TextSize = 14.000
+
+Close_11.Name = "Close"
+Close_11.Parent = Header_12
+Close_11.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Close_11.BackgroundTransparency = 1.000
+Close_11.BorderSizePixel = 0
+Close_11.Position = UDim2.new(1, -50, 0.200000003, 0)
+Close_11.Size = UDim2.new(0, 40, 0, 15)
+Close_11.ZIndex = 2
+Close_11.Font = Enum.Font.SourceSans
+Close_11.Text = ""
+Close_11.TextColor3 = Color3.fromRGB(0, 0, 0)
+Close_11.TextSize = 14.000
+
+Round_12.Name = "Round"
+Round_12.Parent = Close_11
+Round_12.Active = true
+Round_12.AnchorPoint = Vector2.new(0.5, 0.5)
+Round_12.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Round_12.BackgroundTransparency = 1.000
+Round_12.Position = UDim2.new(0.5, 0, 0.5, 0)
+Round_12.Selectable = true
+Round_12.Size = UDim2.new(1, 0, 1, 0)
+Round_12.Image = "rbxassetid://3570695787"
+Round_12.ImageColor3 = Color3.fromRGB(91, 0, 0)
+Round_12.ScaleType = Enum.ScaleType.Slice
+Round_12.SliceCenter = Rect.new(100, 100, 100, 100)
+
 Inject.Name = "Inject"
-Inject.Parent = Altrix32
+Inject.Parent = Altrix33
 Inject.BackgroundColor3 = Color3.fromRGB(9, 9, 9)
 Inject.BorderSizePixel = 0
 Inject.Position = UDim2.new(0, 0, 0.400000006, 0)
@@ -1609,16 +1733,17 @@ TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel.TextSize = 100.000
 
 InjectBG.Name = "InjectBG"
-InjectBG.Parent = Altrix32
+InjectBG.Parent = Altrix33
 InjectBG.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-InjectBG.Size = UDim2.new(1, 0, 1, 0)
+InjectBG.Position = UDim2.new(-0.0749999881, 0, -0.0749999881, 0)
+InjectBG.Size = UDim2.new(1.14999998, 0, 1.14999998, 0)
 InjectBG.Visible = false
 InjectBG.Image = "rbxassetid://2024457953"
 
 -- Scripts:
 
-local function RQSM_fake_script() -- Altrix32.Changelog 
-	local script = Instance.new('LocalScript', Altrix32)
+local function EWAKLIC_fake_script() -- Altrix33.Changelog 
+	local script = Instance.new('LocalScript', Altrix33)
 
 	--[[
 	_____/\\\\\\\\\_____/\\\__________/\\\\\\\\\\\\\\\____/\\\\\\\\\______/\\\\\\\\\\\__/\\\_______/\\\_        
@@ -1631,12 +1756,21 @@ local function RQSM_fake_script() -- Altrix32.Changelog
 	       _\/\\\_______\/\\\_\/\\\\\\\\\\\\\\\___\/\\\_______\/\\\______\//\\\__/\\\\\\\\\\\__/\\\/___\///\\\_ 
 	        _\///________\///__\///////////////____\///________\///________\///__\///////////__\///_______\///__
 	
+	ALTRIX 3.3:
+	1. Dropped The Letter At The End Of Version Numbers
+	2. Removed An Unused Module "Mock" (may come back in v4)
+	3. Cleaned Up Injection Splash Screen
+	4. Added "watch" command
+	5. Added "steal" command
+	
+	ALTRIX 3.2a:
+	1. Added Automatic Updater
+	
 	ALTRIX 3.1a:
 	1a. Compressed 32 Scripts Into 10
 	1b. ALTRIX Should Run Quicker
 	1c. More Room For More Scripts / Future Exploits!
-	2. Added Update Checker
-	3. Added Back Splash Screen
+	2. Added Back Splash Screen
 	
 	ALTRIX 3.0a:
 	1. Organized Code Layout
@@ -1648,8 +1782,8 @@ local function RQSM_fake_script() -- Altrix32.Changelog
 	6. Possibly Fixed A Few Anticheat Issues In Most Games
 	--]]
 end
-coroutine.wrap(RQSM_fake_script)()
-local function ELOX_fake_script() -- Command.keybind 
+coroutine.wrap(EWAKLIC_fake_script)()
+local function DBJZZS_fake_script() -- Command.keybind 
 	local script = Instance.new('LocalScript', Command)
 
 	local ContextActionService = game:GetService("ContextActionService")
@@ -1663,8 +1797,8 @@ local function ELOX_fake_script() -- Command.keybind
 	end
 	ContextActionService:BindAction(ACTION_NAME, handleAction, false, Enum.KeyCode.Semicolon)
 end
-coroutine.wrap(ELOX_fake_script)()
-local function MYWGEI_fake_script() -- corescripts.commandhandler 
+coroutine.wrap(DBJZZS_fake_script)()
+local function EABH_fake_script() -- corescripts.commandhandler 
 	local script = Instance.new('LocalScript', corescripts)
 
 	wait()
@@ -1709,6 +1843,16 @@ local function MYWGEI_fake_script() -- corescripts.commandhandler
 			open("yesclip")
 		elseif command == "tp" then
 			open("cliktp")
+		elseif command == "watch" then
+			open("spectate")
+		elseif command == "steal" then
+			open("steal")
+			
+			
+			
+			
+			
+			
 		end
 	end
 	
@@ -1720,8 +1864,8 @@ local function MYWGEI_fake_script() -- corescripts.commandhandler
 	    end
 	end)
 end
-coroutine.wrap(MYWGEI_fake_script)()
-local function WGBK_fake_script() -- Header_2.HeaderSetup 
+coroutine.wrap(EABH_fake_script)()
+local function UDMD_fake_script() -- Header_2.HeaderSetup 
 	local script = Instance.new('LocalScript', Header_2)
 
 	script.Parent.Visible = false
@@ -1734,8 +1878,8 @@ local function WGBK_fake_script() -- Header_2.HeaderSetup
 		script.Parent.Visible = false
 	end)
 end
-coroutine.wrap(WGBK_fake_script)()
-local function UCTO_fake_script() -- walkair_2.walkair 
+coroutine.wrap(UDMD_fake_script)()
+local function BAZO_fake_script() -- walkair_2.walkair 
 	local script = Instance.new('LocalScript', walkair_2)
 
 	--[[
@@ -1835,8 +1979,8 @@ local function UCTO_fake_script() -- walkair_2.walkair
 	end)
 	Fly()
 end
-coroutine.wrap(UCTO_fake_script)()
-local function BLUOEU_fake_script() -- Header_3.HeaderSetup 
+coroutine.wrap(BAZO_fake_script)()
+local function PQDHZT_fake_script() -- Header_3.HeaderSetup 
 	local script = Instance.new('LocalScript', Header_3)
 
 	script.Parent.Visible = false
@@ -1849,47 +1993,8 @@ local function BLUOEU_fake_script() -- Header_3.HeaderSetup
 		script.Parent.Visible = false
 	end)
 end
-coroutine.wrap(BLUOEU_fake_script)()
-local function HMGW_fake_script() -- m.moc 
-	local script = Instance.new('LocalScript', m)
-
-	script.Parent.MouseButton1Down:connect(function()
-		local E = script.E
-		E.Value = not E.Value
-		if E.Value == false then 
-			script.Parent.BackgroundColor3 = Color3.fromRGB(80,0,0)
-			script.Parent.Text = "Enable"
-		else 
-			script.Parent.BackgroundColor3 = Color3.fromRGB(0,80,0)
-			script.Parent.Text = "Disable"
-		end 
-	end)
-	
-	local Action = game.Players:GetPlayers()
-	for i = 1,#Action do
-		Action[i].Chatted:connect(function(Message)
-			if script.E.Value == true then
-				game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("["..Action[i].Name.."]: ".." "..Message, "All")
-			end
-		end)
-	end
-end
-coroutine.wrap(HMGW_fake_script)()
-local function SEVCBM_fake_script() -- Header_4.HeaderSetup 
-	local script = Instance.new('LocalScript', Header_4)
-
-	script.Parent.Visible = false
-	local frame = script.Parent
-	frame.Draggable = true
-	frame.Selectable = true
-	frame.Active = true
-	
-	script.Parent:WaitForChild("Close").MouseButton1Down:connect(function()
-		script.Parent.Visible = false
-	end)
-end
-coroutine.wrap(SEVCBM_fake_script)()
-local function OWVHEGB_fake_script() -- server.serverspeedgetter 
+coroutine.wrap(PQDHZT_fake_script)()
+local function HJGNY_fake_script() -- server.serverspeedgetter 
 	local script = Instance.new('LocalScript', server)
 
 	while true do
@@ -1897,8 +2002,8 @@ local function OWVHEGB_fake_script() -- server.serverspeedgetter
 		script.Parent.Text = "Server: "..game.Players.LocalPlayer.Character:WaitForChild("Humanoid").WalkSpeed
 	end
 end
-coroutine.wrap(OWVHEGB_fake_script)()
-local function RFXVYFY_fake_script() -- client.ClientSpeedUpdate 
+coroutine.wrap(HJGNY_fake_script)()
+local function PMTU_fake_script() -- client.ClientSpeedUpdate 
 	local script = Instance.new('LocalScript', client)
 
 	wait()
@@ -1914,8 +2019,8 @@ local function RFXVYFY_fake_script() -- client.ClientSpeedUpdate
 		game.Players.LocalPlayer.Character:WaitForChild("Humanoid").WalkSpeed = script.Parent.Text
 	end)
 end
-coroutine.wrap(RFXVYFY_fake_script)()
-local function IMASBHP_fake_script() -- Lock.SpeedLocker 
+coroutine.wrap(PMTU_fake_script)()
+local function KIYEZTB_fake_script() -- Lock.SpeedLocker 
 	local script = Instance.new('LocalScript', Lock)
 
 	script.Parent.MouseButton1Down:connect(function()
@@ -1928,8 +2033,8 @@ local function IMASBHP_fake_script() -- Lock.SpeedLocker
 		end 
 	end)
 end
-coroutine.wrap(IMASBHP_fake_script)()
-local function XCPH_fake_script() -- Lock.SpeedLockerFORCE 
+coroutine.wrap(KIYEZTB_fake_script)()
+local function FIQTIZ_fake_script() -- Lock.SpeedLockerFORCE 
 	local script = Instance.new('LocalScript', Lock)
 
 	while true do
@@ -1939,9 +2044,9 @@ local function XCPH_fake_script() -- Lock.SpeedLockerFORCE
 		wait(0.01)
 	end
 end
-coroutine.wrap(XCPH_fake_script)()
-local function MSUD_fake_script() -- Header_5.HeaderSetup 
-	local script = Instance.new('LocalScript', Header_5)
+coroutine.wrap(FIQTIZ_fake_script)()
+local function MZWZNBO_fake_script() -- Header_4.HeaderSetup 
+	local script = Instance.new('LocalScript', Header_4)
 
 	script.Parent.Visible = false
 	local frame = script.Parent
@@ -1953,8 +2058,8 @@ local function MSUD_fake_script() -- Header_5.HeaderSetup
 		script.Parent.Visible = false
 	end)
 end
-coroutine.wrap(MSUD_fake_script)()
-local function PNYJP_fake_script() -- server_2.serverspeedgetter 
+coroutine.wrap(MZWZNBO_fake_script)()
+local function JZRJDI_fake_script() -- server_2.serverspeedgetter 
 	local script = Instance.new('LocalScript', server_2)
 
 	while true do
@@ -1962,8 +2067,8 @@ local function PNYJP_fake_script() -- server_2.serverspeedgetter
 		script.Parent.Text = "Server: "..game.Players.LocalPlayer.Character:WaitForChild("Humanoid").JumpPower
 	end
 end
-coroutine.wrap(PNYJP_fake_script)()
-local function KIOBD_fake_script() -- client_2.ClientSpeedUpdate 
+coroutine.wrap(JZRJDI_fake_script)()
+local function ILHG_fake_script() -- client_2.ClientSpeedUpdate 
 	local script = Instance.new('LocalScript', client_2)
 
 	wait()
@@ -1979,8 +2084,8 @@ local function KIOBD_fake_script() -- client_2.ClientSpeedUpdate
 		game.Players.LocalPlayer.Character:WaitForChild("Humanoid").JumpPower = script.Parent.Text
 	end)
 end
-coroutine.wrap(KIOBD_fake_script)()
-local function KJJNAFR_fake_script() -- Lock_2.SpeedLocker 
+coroutine.wrap(ILHG_fake_script)()
+local function RPBYIQV_fake_script() -- Lock_2.SpeedLocker 
 	local script = Instance.new('LocalScript', Lock_2)
 
 	script.Parent.MouseButton1Down:connect(function()
@@ -1993,8 +2098,8 @@ local function KJJNAFR_fake_script() -- Lock_2.SpeedLocker
 		end 
 	end)
 end
-coroutine.wrap(KJJNAFR_fake_script)()
-local function UUUTU_fake_script() -- Lock_2.SpeedLockerFORCE 
+coroutine.wrap(RPBYIQV_fake_script)()
+local function ORCKH_fake_script() -- Lock_2.SpeedLockerFORCE 
 	local script = Instance.new('LocalScript', Lock_2)
 
 	while true do
@@ -2004,9 +2109,9 @@ local function UUUTU_fake_script() -- Lock_2.SpeedLockerFORCE
 		wait(0.01)
 	end
 end
-coroutine.wrap(UUUTU_fake_script)()
-local function TKQABAK_fake_script() -- Header_6.HeaderSetup 
-	local script = Instance.new('LocalScript', Header_6)
+coroutine.wrap(ORCKH_fake_script)()
+local function BEDZ_fake_script() -- Header_5.HeaderSetup 
+	local script = Instance.new('LocalScript', Header_5)
 
 	script.Parent.Visible = false
 	local frame = script.Parent
@@ -2018,16 +2123,16 @@ local function TKQABAK_fake_script() -- Header_6.HeaderSetup
 		script.Parent.Visible = false
 	end)
 end
-coroutine.wrap(TKQABAK_fake_script)()
-local function KTBOR_fake_script() -- Close_6.Closer 
-	local script = Instance.new('LocalScript', Close_6)
+coroutine.wrap(BEDZ_fake_script)()
+local function OXJB_fake_script() -- Close_5.Closer 
+	local script = Instance.new('LocalScript', Close_5)
 
 	script.Parent.MouseButton1Down:connect(function()
 		script.Parent.Parent.Visible = false
 	end)
 end
-coroutine.wrap(KTBOR_fake_script)()
-local function HJRGCGK_fake_script() -- Reason2Die.SoftwareActivator 
+coroutine.wrap(OXJB_fake_script)()
+local function ZKFOBD_fake_script() -- Reason2Die.SoftwareActivator 
 	local script = Instance.new('LocalScript', Reason2Die)
 
 	function startsoftware()
@@ -2041,9 +2146,9 @@ local function HJRGCGK_fake_script() -- Reason2Die.SoftwareActivator
 		startsoftware()
 	end)
 end
-coroutine.wrap(HJRGCGK_fake_script)()
-local function SVXFRG_fake_script() -- Header_7.HeaderSetup 
-	local script = Instance.new('LocalScript', Header_7)
+coroutine.wrap(ZKFOBD_fake_script)()
+local function VMFDE_fake_script() -- Header_6.HeaderSetup 
+	local script = Instance.new('LocalScript', Header_6)
 
 	script.Parent.Visible = false
 	local frame = script.Parent
@@ -2055,8 +2160,8 @@ local function SVXFRG_fake_script() -- Header_7.HeaderSetup
 		script.Parent.Visible = false
 	end)
 end
-coroutine.wrap(SVXFRG_fake_script)()
-local function FYVYFJP_fake_script() -- Expand.hbe 
+coroutine.wrap(VMFDE_fake_script)()
+local function SMYCVY_fake_script() -- Expand.hbe 
 	local script = Instance.new('LocalScript', Expand)
 
 	script.Parent.MouseButton1Down:connect(function()
@@ -2089,8 +2194,82 @@ local function FYVYFJP_fake_script() -- Expand.hbe
 		end
 	end)
 end
-coroutine.wrap(FYVYFJP_fake_script)()
-local function WGZSAV_fake_script() -- Header_8.HeaderSetup 
+coroutine.wrap(SMYCVY_fake_script)()
+local function AQQD_fake_script() -- Header_7.HeaderSetup 
+	local script = Instance.new('LocalScript', Header_7)
+
+	script.Parent.Visible = false
+	local frame = script.Parent
+	frame.Draggable = true
+	frame.Selectable = true
+	frame.Active = true
+	
+	script.Parent:WaitForChild("Close").MouseButton1Down:connect(function()
+		script.Parent.Visible = false
+	end)
+end
+coroutine.wrap(AQQD_fake_script)()
+local function IZMKBDW_fake_script() -- Time.LightingApp 
+	local script = Instance.new('LocalScript', Time)
+
+	local apply = script.Parent.Apply
+	local value = script.Parent.Value
+	local setting = script.Parent.Setting
+	
+	apply.MouseButton1Down:connect(function()
+		game.Lighting.ClockTime = value.Text
+	end)
+end
+coroutine.wrap(IZMKBDW_fake_script)()
+local function ZQDN_fake_script() -- FogStart.LightingApp 
+	local script = Instance.new('LocalScript', FogStart)
+
+	local apply = script.Parent.Apply
+	local value = script.Parent.Value
+	local setting = script.Parent.Setting
+	
+	apply.MouseButton1Down:connect(function()
+		game.Lighting.FogStart = value.Text
+	end)
+end
+coroutine.wrap(ZQDN_fake_script)()
+local function HJIBQUY_fake_script() -- FogEnd.LightingApp 
+	local script = Instance.new('LocalScript', FogEnd)
+
+	local apply = script.Parent.Apply
+	local value = script.Parent.Value
+	local setting = script.Parent.Setting
+	
+	apply.MouseButton1Down:connect(function()
+		game.Lighting.FogEnd = value.Text
+	end)
+end
+coroutine.wrap(HJIBQUY_fake_script)()
+local function HFZAL_fake_script() -- Exposure.LightingApp 
+	local script = Instance.new('LocalScript', Exposure)
+
+	local apply = script.Parent.Apply
+	local value = script.Parent.Value
+	local setting = script.Parent.Setting
+	
+	apply.MouseButton1Down:connect(function()
+		game.Lighting.ExposureCompensation = value.Text
+	end)
+end
+coroutine.wrap(HFZAL_fake_script)()
+local function QENJQ_fake_script() -- Brightness.LightingApp 
+	local script = Instance.new('LocalScript', Brightness)
+
+	local apply = script.Parent.Apply
+	local value = script.Parent.Value
+	local setting = script.Parent.Setting
+	
+	apply.MouseButton1Down:connect(function()
+		game.Lighting.Brightness = value.Text
+	end)
+end
+coroutine.wrap(QENJQ_fake_script)()
+local function LDODDK_fake_script() -- Header_8.HeaderSetup 
 	local script = Instance.new('LocalScript', Header_8)
 
 	script.Parent.Visible = false
@@ -2103,82 +2282,8 @@ local function WGZSAV_fake_script() -- Header_8.HeaderSetup
 		script.Parent.Visible = false
 	end)
 end
-coroutine.wrap(WGZSAV_fake_script)()
-local function QNQT_fake_script() -- Time.LightingApp 
-	local script = Instance.new('LocalScript', Time)
-
-	local apply = script.Parent.Apply
-	local value = script.Parent.Value
-	local setting = script.Parent.Setting
-	
-	apply.MouseButton1Down:connect(function()
-		game.Lighting.ClockTime = value.Text
-	end)
-end
-coroutine.wrap(QNQT_fake_script)()
-local function KWBVXT_fake_script() -- FogStart.LightingApp 
-	local script = Instance.new('LocalScript', FogStart)
-
-	local apply = script.Parent.Apply
-	local value = script.Parent.Value
-	local setting = script.Parent.Setting
-	
-	apply.MouseButton1Down:connect(function()
-		game.Lighting.FogStart = value.Text
-	end)
-end
-coroutine.wrap(KWBVXT_fake_script)()
-local function WVQTE_fake_script() -- FogEnd.LightingApp 
-	local script = Instance.new('LocalScript', FogEnd)
-
-	local apply = script.Parent.Apply
-	local value = script.Parent.Value
-	local setting = script.Parent.Setting
-	
-	apply.MouseButton1Down:connect(function()
-		game.Lighting.FogEnd = value.Text
-	end)
-end
-coroutine.wrap(WVQTE_fake_script)()
-local function PNPYFS_fake_script() -- Exposure.LightingApp 
-	local script = Instance.new('LocalScript', Exposure)
-
-	local apply = script.Parent.Apply
-	local value = script.Parent.Value
-	local setting = script.Parent.Setting
-	
-	apply.MouseButton1Down:connect(function()
-		game.Lighting.ExposureCompensation = value.Text
-	end)
-end
-coroutine.wrap(PNPYFS_fake_script)()
-local function BRBRJ_fake_script() -- Brightness.LightingApp 
-	local script = Instance.new('LocalScript', Brightness)
-
-	local apply = script.Parent.Apply
-	local value = script.Parent.Value
-	local setting = script.Parent.Setting
-	
-	apply.MouseButton1Down:connect(function()
-		game.Lighting.Brightness = value.Text
-	end)
-end
-coroutine.wrap(BRBRJ_fake_script)()
-local function OSRR_fake_script() -- Header_9.HeaderSetup 
-	local script = Instance.new('LocalScript', Header_9)
-
-	script.Parent.Visible = false
-	local frame = script.Parent
-	frame.Draggable = true
-	frame.Selectable = true
-	frame.Active = true
-	
-	script.Parent:WaitForChild("Close").MouseButton1Down:connect(function()
-		script.Parent.Visible = false
-	end)
-end
-coroutine.wrap(OSRR_fake_script)()
-local function XFNG_fake_script() -- walkair_3.yesclip 
+coroutine.wrap(LDODDK_fake_script)()
+local function UXYJJNN_fake_script() -- walkair_3.yesclip 
 	local script = Instance.new('LocalScript', walkair_3)
 
 	noclip = false
@@ -2201,9 +2306,9 @@ local function XFNG_fake_script() -- walkair_3.yesclip
 	end)
 	
 end
-coroutine.wrap(XFNG_fake_script)()
-local function JHCNM_fake_script() -- Header_10.HeaderSetup 
-	local script = Instance.new('LocalScript', Header_10)
+coroutine.wrap(UXYJJNN_fake_script)()
+local function SFBO_fake_script() -- Header_9.HeaderSetup 
+	local script = Instance.new('LocalScript', Header_9)
 
 	script.Parent.Visible = false
 	local frame = script.Parent
@@ -2215,8 +2320,8 @@ local function JHCNM_fake_script() -- Header_10.HeaderSetup
 		script.Parent.Visible = false
 	end)
 end
-coroutine.wrap(JHCNM_fake_script)()
-local function MIXCQ_fake_script() -- walkair_4.kliktp 
+coroutine.wrap(SFBO_fake_script)()
+local function BRORDAU_fake_script() -- walkair_4.kliktp 
 	local script = Instance.new('LocalScript', walkair_4)
 
 	local Player = game.Players.LocalPlayer
@@ -2264,8 +2369,75 @@ local function MIXCQ_fake_script() -- walkair_4.kliktp
 		end 
 	end)
 end
-coroutine.wrap(MIXCQ_fake_script)()
-local function JPJG_fake_script() -- Header_11.HeaderSetup 
+coroutine.wrap(BRORDAU_fake_script)()
+local function HFSK_fake_script() -- Header_10.HeaderSetup 
+	local script = Instance.new('LocalScript', Header_10)
+
+	script.Parent.Visible = false
+	local frame = script.Parent
+	frame.Draggable = true
+	frame.Selectable = true
+	frame.Active = true
+	
+	script.Parent:WaitForChild("Close").MouseButton1Down:connect(function()
+		script.Parent.Visible = false
+	end)
+end
+coroutine.wrap(HFSK_fake_script)()
+local function ZLNPC_fake_script() -- Bar.Spectate 
+	local script = Instance.new('LocalScript', Bar)
+
+	cam = game.Workspace.CurrentCamera
+	
+	local bar = script.Parent
+	local title = bar.Title
+	local prev = bar.Previous
+	local nex = bar.Next
+	title.Text = game.Players.LocalPlayer.Name
+	
+	function get()
+		for _,v in pairs(game.Players:GetPlayers())do
+			if v.Name == title.Text then
+				return(_)
+			end
+		end
+	end
+	
+	
+	local debounce = false
+	
+	prev.MouseButton1Click:connect(function()
+		wait(.1)
+		local players = game.Players:GetPlayers()
+		local num = get()
+		if not pcall(function() 
+			cam.CameraSubject = players[num-1].Character.Humanoid
+			end) then
+			cam.CameraSubject = players[#players].Character.Humanoid
+		end
+	pcall(function()
+					title.Text = game.Players:GetPlayerFromCharacter(cam.CameraSubject.Parent).Name
+			end)
+	end)
+	
+	nex.MouseButton1Click:connect(function()
+		wait(.1)
+		local players = game.Players:GetPlayers()
+		local num = get()
+		if not pcall(function() 
+			cam.CameraSubject = players[num+1].Character.Humanoid
+			end) then
+			cam.CameraSubject = players[1].Character.Humanoid
+		end
+	pcall(function()
+					title.Text = game.Players:GetPlayerFromCharacter(cam.CameraSubject.Parent).Name
+			end)
+	end)
+	
+	
+end
+coroutine.wrap(ZLNPC_fake_script)()
+local function HYHCE_fake_script() -- Header_11.HeaderSetup 
 	local script = Instance.new('LocalScript', Header_11)
 
 	script.Parent.Visible = false
@@ -2278,8 +2450,34 @@ local function JPJG_fake_script() -- Header_11.HeaderSetup
 		script.Parent.Visible = false
 	end)
 end
-coroutine.wrap(JPJG_fake_script)()
-local function NVCWG_fake_script() -- Inject.Inject 
+coroutine.wrap(HYHCE_fake_script)()
+local function SFBL_fake_script() -- Execute.stealercore 
+	local script = Instance.new('LocalScript', Execute)
+
+	script.Parent.MouseButton1Down:connect(function()
+		for i,v in pairs (game:GetService("Players")[script.Parent.Parent.uname.Text].Backpack:GetChildren()) do
+			if v:IsA("Tool") or v:IsA("HopperBin") then
+				v.Parent = game:GetService("Players").LocalPlayer.Backpack
+			end
+		end
+	end)
+end
+coroutine.wrap(SFBL_fake_script)()
+local function LXEA_fake_script() -- Header_12.HeaderSetup 
+	local script = Instance.new('LocalScript', Header_12)
+
+	script.Parent.Visible = false
+	local frame = script.Parent
+	frame.Draggable = true
+	frame.Selectable = true
+	frame.Active = true
+	
+	script.Parent:WaitForChild("Close").MouseButton1Down:connect(function()
+		script.Parent.Visible = false
+	end)
+end
+coroutine.wrap(LXEA_fake_script)()
+local function HFRVU_fake_script() -- Inject.Inject 
 	local script = Instance.new('LocalScript', Inject)
 
 	wait()
@@ -2292,4 +2490,4 @@ local function NVCWG_fake_script() -- Inject.Inject
 	script.Parent.Parent:WaitForChild("InjectBG"):Destroy()
 	script.Parent:Destroy()
 end
-coroutine.wrap(NVCWG_fake_script)()
+coroutine.wrap(HFRVU_fake_script)()
