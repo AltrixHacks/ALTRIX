@@ -148,7 +148,7 @@ local TextLabel_2 = Instance.new("TextLabel")
 
 --Properties:
 
-Altrix34.Name = "Altrix (3.4)"
+Altrix34.Name = "Chat"
 Altrix34.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 Altrix34.DisplayOrder = 999999999
 Altrix34.ResetOnSpawn = false
