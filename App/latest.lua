@@ -210,7 +210,7 @@ VN.Position = UDim2.new(0.850000024, 0, 0, 0)
 VN.Size = UDim2.new(0.150000006, 0, 0.600000024, 0)
 VN.ZIndex = 5
 VN.Font = Enum.Font.SourceSansLight
-VN.Text = "V3.4"
+VN.Text = "V3.4.2"
 VN.TextColor3 = Color3.fromRGB(255, 255, 255)
 VN.TextScaled = true
 VN.TextSize = 15.000
@@ -1689,91 +1689,10 @@ TextLabel_2.Text = "ALTRIX"
 TextLabel_2.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel_2.TextSize = 100.000
 
--- Module Scripts:
-
-local fake_module_scripts = {}
-
-do -- nil.btools
-	local script = Instance.new('ModuleScript', nil)
-	script.Name = "btools"
-	local function module_script()
-		local module = {}
-			local Players = game:GetService("Players")
-			
-			local localPlayer = Players.LocalPlayer
-			local backpack = localPlayer:WaitForChild("Backpack")
-			
-			local tool = Instance.new("Tool")
-			tool.RequiresHandle = false
-			tool.CanBeDropped = false
-			tool.Parent = backpack
-			tool.Name = "Insert Part"
-			tool.TextureId = "http://www.roblox.com/asset/?id=180084973"
-			
-			
-			tool.Equipped:Connect(function(mouse)
-				mouse.Button1Down:Connect(function()
-					local newpart = Instance.new("Part", workspace)
-				end)
-			end)
-			
-			a = Instance.new("HopperBin", game.Players.LocalPlayer.Backpack)
-			a.BinType = 2
-			b = Instance.new("HopperBin", game.Players.LocalPlayer.Backpack)
-			b.BinType = 3
-			c = Instance.new("HopperBin", game.Players.LocalPlayer.Backpack)
-			c.BinType = 4
-			
-			
-			local tool2 = Instance.new("Tool")
-			tool2.RequiresHandle = false
-			tool2.CanBeDropped = false
-			tool2.Parent = backpack
-			tool2.Name = "Anchor"
-			tool2.TextureId = "http://www.roblox.com/asset/?id=132402257"
-			tool2.Equipped:Connect(function(mouse)
-			mouse.Button1Down:Connect(function()
-			if mouse.Target and mouse.Target.Parent then
-			mouse.Target.Anchored = true
-			
-			
-			end
-			end)
-			end)
-			local tool3 = Instance.new("Tool")
-			tool3.RequiresHandle = false
-			tool3.CanBeDropped = false
-			tool3.Parent = backpack
-			tool3.Name = "UnAnchor"
-			tool3.Equipped:Connect(function(mouse)
-			mouse.Button1Down:Connect(function()
-			if mouse.Target and mouse.Target.Parent then
-			mouse.Target.Anchored = false
-			
-			
-			
-			end
-			end)
-			end)
-		return module
-		
-	end
-	fake_module_scripts[script] = module_script
-end
-
-
 -- Scripts:
 
-local function VDTQV_fake_script() -- Command.keybind 
+local function TFRC_fake_script() -- Command.keybind 
 	local script = Instance.new('LocalScript', Command)
-	local req = require
-	local require = function(obj)
-		local fake = fake_module_scripts[obj]
-		if fake then
-			return fake()
-		end
-		return req(obj)
-	end
 
 	local ContextActionService = game:GetService("ContextActionService")
 	local ACTION_NAME = "FocusTheTextBox"
@@ -1786,22 +1705,86 @@ local function VDTQV_fake_script() -- Command.keybind
 	end
 	ContextActionService:BindAction(ACTION_NAME, handleAction, false, Enum.KeyCode.Semicolon)
 end
-coroutine.wrap(VDTQV_fake_script)()
-local function ZPSLFYQ_fake_script() -- corescripts.commandhandler 
+coroutine.wrap(TFRC_fake_script)()
+local function TSYCD_fake_script() -- corescripts.commandhandler 
 	local script = Instance.new('LocalScript', corescripts)
-	local req = require
-	local require = function(obj)
-		local fake = fake_module_scripts[obj]
-		if fake then
-			return fake()
-		end
-		return req(obj)
-	end
 
 	wait()
 	script.Parent.Parent.Header.Draggable = true
 	script.Parent.Parent.Header.Selectable = true
 	script.Parent.Parent.Header.Active = true
+	
+	
+	
+	
+	
+	function btools()
+		local Players = game:GetService("Players")
+		
+		local localPlayer = Players.LocalPlayer
+		local backpack = localPlayer:WaitForChild("Backpack")
+		
+		local tool = Instance.new("Tool")
+		tool.RequiresHandle = false
+		tool.CanBeDropped = false
+		tool.Parent = backpack
+		tool.Name = "Insert Part"
+		tool.TextureId = "http://www.roblox.com/asset/?id=180084973"
+		
+		
+		tool.Equipped:Connect(function(mouse)
+			mouse.Button1Down:Connect(function()
+				local newpart = Instance.new("Part", workspace)
+			end)
+		end)
+		
+		a = Instance.new("HopperBin", game.Players.LocalPlayer.Backpack)
+		a.BinType = 2
+		b = Instance.new("HopperBin", game.Players.LocalPlayer.Backpack)
+		b.BinType = 3
+		c = Instance.new("HopperBin", game.Players.LocalPlayer.Backpack)
+		c.BinType = 4
+		
+		
+		local tool2 = Instance.new("Tool")
+		tool2.RequiresHandle = false
+		tool2.CanBeDropped = false
+		tool2.Parent = backpack
+		tool2.Name = "Anchor"
+		tool2.TextureId = "http://www.roblox.com/asset/?id=132402257"
+		tool2.Equipped:Connect(function(mouse)
+		mouse.Button1Down:Connect(function()
+		if mouse.Target and mouse.Target.Parent then
+		mouse.Target.Anchored = true
+		
+		
+		end
+		end)
+		end)
+		local tool3 = Instance.new("Tool")
+		tool3.RequiresHandle = false
+		tool3.CanBeDropped = false
+		tool3.Parent = backpack
+		tool3.Name = "UnAnchor"
+		tool3.Equipped:Connect(function(mouse)
+		mouse.Button1Down:Connect(function()
+		if mouse.Target and mouse.Target.Parent then
+		mouse.Target.Anchored = false
+		
+		
+		
+		end
+		end)
+		end)
+	end
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	
 	local cmdimput = script.Parent.Parent.Header.MenuContainer.Command
@@ -1845,7 +1828,7 @@ local function ZPSLFYQ_fake_script() -- corescripts.commandhandler
 		elseif command == "steal" then
 			open("steal")
 		elseif command == "btools" then
-			require(script.btools)
+			btools()
 			
 			
 			
@@ -1866,17 +1849,9 @@ local function ZPSLFYQ_fake_script() -- corescripts.commandhandler
 	    end
 	end)
 end
-coroutine.wrap(ZPSLFYQ_fake_script)()
-local function CGHDP_fake_script() -- Header_2.HeaderSetup 
+coroutine.wrap(TSYCD_fake_script)()
+local function ETLDWBO_fake_script() -- Header_2.HeaderSetup 
 	local script = Instance.new('LocalScript', Header_2)
-	local req = require
-	local require = function(obj)
-		local fake = fake_module_scripts[obj]
-		if fake then
-			return fake()
-		end
-		return req(obj)
-	end
 
 	script.Parent.Visible = false
 	local frame = script.Parent
@@ -1888,17 +1863,9 @@ local function CGHDP_fake_script() -- Header_2.HeaderSetup
 		script.Parent.Visible = false
 	end)
 end
-coroutine.wrap(CGHDP_fake_script)()
-local function FFHUFQG_fake_script() -- walkair_2.walkair 
+coroutine.wrap(ETLDWBO_fake_script)()
+local function CLJYKIK_fake_script() -- walkair_2.walkair 
 	local script = Instance.new('LocalScript', walkair_2)
-	local req = require
-	local require = function(obj)
-		local fake = fake_module_scripts[obj]
-		if fake then
-			return fake()
-		end
-		return req(obj)
-	end
 
 	--[[
 		Nah Fam ALTRIX
@@ -1997,17 +1964,9 @@ local function FFHUFQG_fake_script() -- walkair_2.walkair
 	end)
 	Fly()
 end
-coroutine.wrap(FFHUFQG_fake_script)()
-local function UZNWB_fake_script() -- Header_3.HeaderSetup 
+coroutine.wrap(CLJYKIK_fake_script)()
+local function MMDG_fake_script() -- Header_3.HeaderSetup 
 	local script = Instance.new('LocalScript', Header_3)
-	local req = require
-	local require = function(obj)
-		local fake = fake_module_scripts[obj]
-		if fake then
-			return fake()
-		end
-		return req(obj)
-	end
 
 	script.Parent.Visible = false
 	local frame = script.Parent
@@ -2019,34 +1978,18 @@ local function UZNWB_fake_script() -- Header_3.HeaderSetup
 		script.Parent.Visible = false
 	end)
 end
-coroutine.wrap(UZNWB_fake_script)()
-local function YFUEGMZ_fake_script() -- server.serverspeedgetter 
+coroutine.wrap(MMDG_fake_script)()
+local function YDXGJA_fake_script() -- server.serverspeedgetter 
 	local script = Instance.new('LocalScript', server)
-	local req = require
-	local require = function(obj)
-		local fake = fake_module_scripts[obj]
-		if fake then
-			return fake()
-		end
-		return req(obj)
-	end
 
 	while true do
 		wait(0.01)
 		script.Parent.Text = "Server: "..game.Players.LocalPlayer.Character:WaitForChild("Humanoid").WalkSpeed
 	end
 end
-coroutine.wrap(YFUEGMZ_fake_script)()
-local function ZYFWJN_fake_script() -- client.ClientSpeedUpdate 
+coroutine.wrap(YDXGJA_fake_script)()
+local function HSOI_fake_script() -- client.ClientSpeedUpdate 
 	local script = Instance.new('LocalScript', client)
-	local req = require
-	local require = function(obj)
-		local fake = fake_module_scripts[obj]
-		if fake then
-			return fake()
-		end
-		return req(obj)
-	end
 
 	wait()
 	script.Parent.Text = game.Players.LocalPlayer.Character:WaitForChild("Humanoid").WalkSpeed
@@ -2061,17 +2004,9 @@ local function ZYFWJN_fake_script() -- client.ClientSpeedUpdate
 		game.Players.LocalPlayer.Character:WaitForChild("Humanoid").WalkSpeed = script.Parent.Text
 	end)
 end
-coroutine.wrap(ZYFWJN_fake_script)()
-local function FPXGYY_fake_script() -- Lock.SpeedLocker 
+coroutine.wrap(HSOI_fake_script)()
+local function DDQCR_fake_script() -- Lock.SpeedLocker 
 	local script = Instance.new('LocalScript', Lock)
-	local req = require
-	local require = function(obj)
-		local fake = fake_module_scripts[obj]
-		if fake then
-			return fake()
-		end
-		return req(obj)
-	end
 
 	script.Parent.MouseButton1Down:connect(function()
 		if script.Parent.BackgroundColor3 == Color3.fromRGB(0,80,0) then
@@ -2083,17 +2018,9 @@ local function FPXGYY_fake_script() -- Lock.SpeedLocker
 		end 
 	end)
 end
-coroutine.wrap(FPXGYY_fake_script)()
-local function TEPUT_fake_script() -- Lock.SpeedLockerFORCE 
+coroutine.wrap(DDQCR_fake_script)()
+local function GPON_fake_script() -- Lock.SpeedLockerFORCE 
 	local script = Instance.new('LocalScript', Lock)
-	local req = require
-	local require = function(obj)
-		local fake = fake_module_scripts[obj]
-		if fake then
-			return fake()
-		end
-		return req(obj)
-	end
 
 	while true do
 		if script.Parent.BackgroundColor3 == Color3.fromRGB(0,80,0) then
@@ -2102,17 +2029,9 @@ local function TEPUT_fake_script() -- Lock.SpeedLockerFORCE
 		wait(0.01)
 	end
 end
-coroutine.wrap(TEPUT_fake_script)()
-local function YOREAA_fake_script() -- Header_4.HeaderSetup 
+coroutine.wrap(GPON_fake_script)()
+local function TNDDH_fake_script() -- Header_4.HeaderSetup 
 	local script = Instance.new('LocalScript', Header_4)
-	local req = require
-	local require = function(obj)
-		local fake = fake_module_scripts[obj]
-		if fake then
-			return fake()
-		end
-		return req(obj)
-	end
 
 	script.Parent.Visible = false
 	local frame = script.Parent
@@ -2124,34 +2043,18 @@ local function YOREAA_fake_script() -- Header_4.HeaderSetup
 		script.Parent.Visible = false
 	end)
 end
-coroutine.wrap(YOREAA_fake_script)()
-local function OGZW_fake_script() -- server_2.serverspeedgetter 
+coroutine.wrap(TNDDH_fake_script)()
+local function ZCZBOG_fake_script() -- server_2.serverspeedgetter 
 	local script = Instance.new('LocalScript', server_2)
-	local req = require
-	local require = function(obj)
-		local fake = fake_module_scripts[obj]
-		if fake then
-			return fake()
-		end
-		return req(obj)
-	end
 
 	while true do
 		wait(0.01)
 		script.Parent.Text = "Server: "..game.Players.LocalPlayer.Character:WaitForChild("Humanoid").JumpPower
 	end
 end
-coroutine.wrap(OGZW_fake_script)()
-local function VUAUB_fake_script() -- client_2.ClientSpeedUpdate 
+coroutine.wrap(ZCZBOG_fake_script)()
+local function QAWKMLY_fake_script() -- client_2.ClientSpeedUpdate 
 	local script = Instance.new('LocalScript', client_2)
-	local req = require
-	local require = function(obj)
-		local fake = fake_module_scripts[obj]
-		if fake then
-			return fake()
-		end
-		return req(obj)
-	end
 
 	wait()
 	script.Parent.Text = game.Players.LocalPlayer.Character:WaitForChild("Humanoid").JumpPower
@@ -2166,17 +2069,9 @@ local function VUAUB_fake_script() -- client_2.ClientSpeedUpdate
 		game.Players.LocalPlayer.Character:WaitForChild("Humanoid").JumpPower = script.Parent.Text
 	end)
 end
-coroutine.wrap(VUAUB_fake_script)()
-local function BITKYAF_fake_script() -- Lock_2.SpeedLocker 
+coroutine.wrap(QAWKMLY_fake_script)()
+local function XDSH_fake_script() -- Lock_2.SpeedLocker 
 	local script = Instance.new('LocalScript', Lock_2)
-	local req = require
-	local require = function(obj)
-		local fake = fake_module_scripts[obj]
-		if fake then
-			return fake()
-		end
-		return req(obj)
-	end
 
 	script.Parent.MouseButton1Down:connect(function()
 		if script.Parent.BackgroundColor3 == Color3.fromRGB(0,80,0) then
@@ -2188,17 +2083,9 @@ local function BITKYAF_fake_script() -- Lock_2.SpeedLocker
 		end 
 	end)
 end
-coroutine.wrap(BITKYAF_fake_script)()
-local function EOWREII_fake_script() -- Lock_2.SpeedLockerFORCE 
+coroutine.wrap(XDSH_fake_script)()
+local function EFTK_fake_script() -- Lock_2.SpeedLockerFORCE 
 	local script = Instance.new('LocalScript', Lock_2)
-	local req = require
-	local require = function(obj)
-		local fake = fake_module_scripts[obj]
-		if fake then
-			return fake()
-		end
-		return req(obj)
-	end
 
 	while true do
 		if script.Parent.BackgroundColor3 == Color3.fromRGB(0,80,0) then
@@ -2207,17 +2094,9 @@ local function EOWREII_fake_script() -- Lock_2.SpeedLockerFORCE
 		wait(0.01)
 	end
 end
-coroutine.wrap(EOWREII_fake_script)()
-local function FZRS_fake_script() -- Header_5.HeaderSetup 
+coroutine.wrap(EFTK_fake_script)()
+local function XJTOCWT_fake_script() -- Header_5.HeaderSetup 
 	local script = Instance.new('LocalScript', Header_5)
-	local req = require
-	local require = function(obj)
-		local fake = fake_module_scripts[obj]
-		if fake then
-			return fake()
-		end
-		return req(obj)
-	end
 
 	script.Parent.Visible = false
 	local frame = script.Parent
@@ -2229,33 +2108,17 @@ local function FZRS_fake_script() -- Header_5.HeaderSetup
 		script.Parent.Visible = false
 	end)
 end
-coroutine.wrap(FZRS_fake_script)()
-local function RPTUM_fake_script() -- Close_5.Closer 
+coroutine.wrap(XJTOCWT_fake_script)()
+local function ZCNTQSD_fake_script() -- Close_5.Closer 
 	local script = Instance.new('LocalScript', Close_5)
-	local req = require
-	local require = function(obj)
-		local fake = fake_module_scripts[obj]
-		if fake then
-			return fake()
-		end
-		return req(obj)
-	end
 
 	script.Parent.MouseButton1Down:connect(function()
 		script.Parent.Parent.Visible = false
 	end)
 end
-coroutine.wrap(RPTUM_fake_script)()
-local function IONI_fake_script() -- Reason2Die.SoftwareActivator 
+coroutine.wrap(ZCNTQSD_fake_script)()
+local function TMYSDDD_fake_script() -- Reason2Die.SoftwareActivator 
 	local script = Instance.new('LocalScript', Reason2Die)
-	local req = require
-	local require = function(obj)
-		local fake = fake_module_scripts[obj]
-		if fake then
-			return fake()
-		end
-		return req(obj)
-	end
 
 	function startsoftware()
 		script.Parent.Parent.Parent.Parent.Parent.software[script.Parent.Name].Header.Visible = not script.Parent.Parent.Parent.Parent.Parent.software[script.Parent.Name].Header.Visible
@@ -2268,17 +2131,9 @@ local function IONI_fake_script() -- Reason2Die.SoftwareActivator
 		startsoftware()
 	end)
 end
-coroutine.wrap(IONI_fake_script)()
-local function BMHX_fake_script() -- Header_6.HeaderSetup 
+coroutine.wrap(TMYSDDD_fake_script)()
+local function RFMM_fake_script() -- Header_6.HeaderSetup 
 	local script = Instance.new('LocalScript', Header_6)
-	local req = require
-	local require = function(obj)
-		local fake = fake_module_scripts[obj]
-		if fake then
-			return fake()
-		end
-		return req(obj)
-	end
 
 	script.Parent.Visible = false
 	local frame = script.Parent
@@ -2290,17 +2145,9 @@ local function BMHX_fake_script() -- Header_6.HeaderSetup
 		script.Parent.Visible = false
 	end)
 end
-coroutine.wrap(BMHX_fake_script)()
-local function AOGT_fake_script() -- Expand.hbe 
+coroutine.wrap(RFMM_fake_script)()
+local function QYSFSBQ_fake_script() -- Expand.hbe 
 	local script = Instance.new('LocalScript', Expand)
-	local req = require
-	local require = function(obj)
-		local fake = fake_module_scripts[obj]
-		if fake then
-			return fake()
-		end
-		return req(obj)
-	end
 
 	script.Parent.MouseButton1Down:connect(function()
 		if script.Parent.Parent.size.Text == "" then
@@ -2332,17 +2179,9 @@ local function AOGT_fake_script() -- Expand.hbe
 		end
 	end)
 end
-coroutine.wrap(AOGT_fake_script)()
-local function FSLPC_fake_script() -- Header_7.HeaderSetup 
+coroutine.wrap(QYSFSBQ_fake_script)()
+local function NAIRLQ_fake_script() -- Header_7.HeaderSetup 
 	local script = Instance.new('LocalScript', Header_7)
-	local req = require
-	local require = function(obj)
-		local fake = fake_module_scripts[obj]
-		if fake then
-			return fake()
-		end
-		return req(obj)
-	end
 
 	script.Parent.Visible = false
 	local frame = script.Parent
@@ -2354,17 +2193,9 @@ local function FSLPC_fake_script() -- Header_7.HeaderSetup
 		script.Parent.Visible = false
 	end)
 end
-coroutine.wrap(FSLPC_fake_script)()
-local function PIEYS_fake_script() -- Time.LightingApp 
+coroutine.wrap(NAIRLQ_fake_script)()
+local function RBJO_fake_script() -- Time.LightingApp 
 	local script = Instance.new('LocalScript', Time)
-	local req = require
-	local require = function(obj)
-		local fake = fake_module_scripts[obj]
-		if fake then
-			return fake()
-		end
-		return req(obj)
-	end
 
 	local apply = script.Parent.Apply
 	local value = script.Parent.Value
@@ -2374,17 +2205,9 @@ local function PIEYS_fake_script() -- Time.LightingApp
 		game.Lighting.ClockTime = value.Text
 	end)
 end
-coroutine.wrap(PIEYS_fake_script)()
-local function HOPYZL_fake_script() -- FogStart.LightingApp 
+coroutine.wrap(RBJO_fake_script)()
+local function QTUKOII_fake_script() -- FogStart.LightingApp 
 	local script = Instance.new('LocalScript', FogStart)
-	local req = require
-	local require = function(obj)
-		local fake = fake_module_scripts[obj]
-		if fake then
-			return fake()
-		end
-		return req(obj)
-	end
 
 	local apply = script.Parent.Apply
 	local value = script.Parent.Value
@@ -2394,17 +2217,9 @@ local function HOPYZL_fake_script() -- FogStart.LightingApp
 		game.Lighting.FogStart = value.Text
 	end)
 end
-coroutine.wrap(HOPYZL_fake_script)()
-local function OHYA_fake_script() -- FogEnd.LightingApp 
+coroutine.wrap(QTUKOII_fake_script)()
+local function MKJDVO_fake_script() -- FogEnd.LightingApp 
 	local script = Instance.new('LocalScript', FogEnd)
-	local req = require
-	local require = function(obj)
-		local fake = fake_module_scripts[obj]
-		if fake then
-			return fake()
-		end
-		return req(obj)
-	end
 
 	local apply = script.Parent.Apply
 	local value = script.Parent.Value
@@ -2414,17 +2229,9 @@ local function OHYA_fake_script() -- FogEnd.LightingApp
 		game.Lighting.FogEnd = value.Text
 	end)
 end
-coroutine.wrap(OHYA_fake_script)()
-local function VBIEHL_fake_script() -- Exposure.LightingApp 
+coroutine.wrap(MKJDVO_fake_script)()
+local function RSHFR_fake_script() -- Exposure.LightingApp 
 	local script = Instance.new('LocalScript', Exposure)
-	local req = require
-	local require = function(obj)
-		local fake = fake_module_scripts[obj]
-		if fake then
-			return fake()
-		end
-		return req(obj)
-	end
 
 	local apply = script.Parent.Apply
 	local value = script.Parent.Value
@@ -2434,17 +2241,9 @@ local function VBIEHL_fake_script() -- Exposure.LightingApp
 		game.Lighting.ExposureCompensation = value.Text
 	end)
 end
-coroutine.wrap(VBIEHL_fake_script)()
-local function ZOHBQL_fake_script() -- Brightness.LightingApp 
+coroutine.wrap(RSHFR_fake_script)()
+local function IFMSQFU_fake_script() -- Brightness.LightingApp 
 	local script = Instance.new('LocalScript', Brightness)
-	local req = require
-	local require = function(obj)
-		local fake = fake_module_scripts[obj]
-		if fake then
-			return fake()
-		end
-		return req(obj)
-	end
 
 	local apply = script.Parent.Apply
 	local value = script.Parent.Value
@@ -2454,17 +2253,9 @@ local function ZOHBQL_fake_script() -- Brightness.LightingApp
 		game.Lighting.Brightness = value.Text
 	end)
 end
-coroutine.wrap(ZOHBQL_fake_script)()
-local function DPCGD_fake_script() -- Header_8.HeaderSetup 
+coroutine.wrap(IFMSQFU_fake_script)()
+local function MCNRYDM_fake_script() -- Header_8.HeaderSetup 
 	local script = Instance.new('LocalScript', Header_8)
-	local req = require
-	local require = function(obj)
-		local fake = fake_module_scripts[obj]
-		if fake then
-			return fake()
-		end
-		return req(obj)
-	end
 
 	script.Parent.Visible = false
 	local frame = script.Parent
@@ -2476,17 +2267,9 @@ local function DPCGD_fake_script() -- Header_8.HeaderSetup
 		script.Parent.Visible = false
 	end)
 end
-coroutine.wrap(DPCGD_fake_script)()
-local function YMHD_fake_script() -- Lock_3.SpeedLocker 
+coroutine.wrap(MCNRYDM_fake_script)()
+local function AQIL_fake_script() -- Lock_3.SpeedLocker 
 	local script = Instance.new('LocalScript', Lock_3)
-	local req = require
-	local require = function(obj)
-		local fake = fake_module_scripts[obj]
-		if fake then
-			return fake()
-		end
-		return req(obj)
-	end
 
 	script.Parent.MouseButton1Down:connect(function()
 		if script.Parent.BackgroundColor3 == Color3.fromRGB(0,80,0) then
@@ -2498,17 +2281,9 @@ local function YMHD_fake_script() -- Lock_3.SpeedLocker
 		end 
 	end)
 end
-coroutine.wrap(YMHD_fake_script)()
-local function YXDR_fake_script() -- Lock_3.SpeedLockerFORCE 
+coroutine.wrap(AQIL_fake_script)()
+local function VSQNVL_fake_script() -- Lock_3.SpeedLockerFORCE 
 	local script = Instance.new('LocalScript', Lock_3)
-	local req = require
-	local require = function(obj)
-		local fake = fake_module_scripts[obj]
-		if fake then
-			return fake()
-		end
-		return req(obj)
-	end
 
 	while true do
 		if script.Parent.BackgroundColor3 == Color3.fromRGB(0,80,0) then
@@ -2521,17 +2296,9 @@ local function YXDR_fake_script() -- Lock_3.SpeedLockerFORCE
 		wait(0.01)
 	end
 end
-coroutine.wrap(YXDR_fake_script)()
-local function QLPEOJL_fake_script() -- walkair_3.yesclip 
+coroutine.wrap(VSQNVL_fake_script)()
+local function YUXQLE_fake_script() -- walkair_3.yesclip 
 	local script = Instance.new('LocalScript', walkair_3)
-	local req = require
-	local require = function(obj)
-		local fake = fake_module_scripts[obj]
-		if fake then
-			return fake()
-		end
-		return req(obj)
-	end
 
 	noclip = false
 	game:GetService('RunService').Stepped:connect(function()
@@ -2553,17 +2320,9 @@ local function QLPEOJL_fake_script() -- walkair_3.yesclip
 	end)
 	
 end
-coroutine.wrap(QLPEOJL_fake_script)()
-local function VYPO_fake_script() -- Header_9.HeaderSetup 
+coroutine.wrap(YUXQLE_fake_script)()
+local function ZVVYIO_fake_script() -- Header_9.HeaderSetup 
 	local script = Instance.new('LocalScript', Header_9)
-	local req = require
-	local require = function(obj)
-		local fake = fake_module_scripts[obj]
-		if fake then
-			return fake()
-		end
-		return req(obj)
-	end
 
 	script.Parent.Visible = false
 	local frame = script.Parent
@@ -2575,17 +2334,9 @@ local function VYPO_fake_script() -- Header_9.HeaderSetup
 		script.Parent.Visible = false
 	end)
 end
-coroutine.wrap(VYPO_fake_script)()
-local function SBSTDSL_fake_script() -- walkair_4.kliktp 
+coroutine.wrap(ZVVYIO_fake_script)()
+local function JGCEJH_fake_script() -- walkair_4.kliktp 
 	local script = Instance.new('LocalScript', walkair_4)
-	local req = require
-	local require = function(obj)
-		local fake = fake_module_scripts[obj]
-		if fake then
-			return fake()
-		end
-		return req(obj)
-	end
 
 	local Player = game.Players.LocalPlayer
 	local Mouse = Player:GetMouse()
@@ -2632,17 +2383,9 @@ local function SBSTDSL_fake_script() -- walkair_4.kliktp
 		end 
 	end)
 end
-coroutine.wrap(SBSTDSL_fake_script)()
-local function YQQNSC_fake_script() -- Header_10.HeaderSetup 
+coroutine.wrap(JGCEJH_fake_script)()
+local function PZDD_fake_script() -- Header_10.HeaderSetup 
 	local script = Instance.new('LocalScript', Header_10)
-	local req = require
-	local require = function(obj)
-		local fake = fake_module_scripts[obj]
-		if fake then
-			return fake()
-		end
-		return req(obj)
-	end
 
 	script.Parent.Visible = false
 	local frame = script.Parent
@@ -2654,17 +2397,9 @@ local function YQQNSC_fake_script() -- Header_10.HeaderSetup
 		script.Parent.Visible = false
 	end)
 end
-coroutine.wrap(YQQNSC_fake_script)()
-local function IPPCJEW_fake_script() -- Bar.Spectate 
+coroutine.wrap(PZDD_fake_script)()
+local function SQJDILJ_fake_script() -- Bar.Spectate 
 	local script = Instance.new('LocalScript', Bar)
-	local req = require
-	local require = function(obj)
-		local fake = fake_module_scripts[obj]
-		if fake then
-			return fake()
-		end
-		return req(obj)
-	end
 
 	cam = game.Workspace.CurrentCamera
 	
@@ -2715,17 +2450,9 @@ local function IPPCJEW_fake_script() -- Bar.Spectate
 	
 	
 end
-coroutine.wrap(IPPCJEW_fake_script)()
-local function LVLZ_fake_script() -- Execute.stealercore 
+coroutine.wrap(SQJDILJ_fake_script)()
+local function HSCWRKV_fake_script() -- Execute.stealercore 
 	local script = Instance.new('LocalScript', Execute)
-	local req = require
-	local require = function(obj)
-		local fake = fake_module_scripts[obj]
-		if fake then
-			return fake()
-		end
-		return req(obj)
-	end
 
 	script.Parent.MouseButton1Down:connect(function()
 		for i,v in pairs (game:GetService("Players")[script.Parent.Parent.Bar.Title.Text].Backpack:GetChildren()) do
@@ -2736,17 +2463,9 @@ local function LVLZ_fake_script() -- Execute.stealercore
 		end
 	end)
 end
-coroutine.wrap(LVLZ_fake_script)()
-local function BYDLAXB_fake_script() -- Header_11.HeaderSetup 
+coroutine.wrap(HSCWRKV_fake_script)()
+local function MNPGOC_fake_script() -- Header_11.HeaderSetup 
 	local script = Instance.new('LocalScript', Header_11)
-	local req = require
-	local require = function(obj)
-		local fake = fake_module_scripts[obj]
-		if fake then
-			return fake()
-		end
-		return req(obj)
-	end
 
 	script.Parent.Visible = false
 	local frame = script.Parent
@@ -2758,17 +2477,9 @@ local function BYDLAXB_fake_script() -- Header_11.HeaderSetup
 		script.Parent.Visible = false
 	end)
 end
-coroutine.wrap(BYDLAXB_fake_script)()
-local function PMOZKMX_fake_script() -- Inject.Inject 
+coroutine.wrap(MNPGOC_fake_script)()
+local function OJMI_fake_script() -- Inject.Inject 
 	local script = Instance.new('LocalScript', Inject)
-	local req = require
-	local require = function(obj)
-		local fake = fake_module_scripts[obj]
-		if fake then
-			return fake()
-		end
-		return req(obj)
-	end
 
 	wait()
 	script.Parent.Parent.core:WaitForChild("Header").Visible = false
@@ -2779,4 +2490,4 @@ local function PMOZKMX_fake_script() -- Inject.Inject
 	script.Parent.Parent.core:WaitForChild("Header").Visible = true
 	script.Parent:Destroy()
 end
-coroutine.wrap(PMOZKMX_fake_script)()
+coroutine.wrap(OJMI_fake_script)()
