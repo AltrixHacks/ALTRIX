@@ -1,4 +1,4 @@
-local Altrix33 = Instance.new("ScreenGui")
+local Altrix34 = Instance.new("ScreenGui")
 local core = Instance.new("Folder")
 local Header = Instance.new("Frame")
 local ALTRIX = Instance.new("TextLabel")
@@ -7,6 +7,7 @@ local Command = Instance.new("TextBox")
 local VN = Instance.new("TextLabel")
 local Icon = Instance.new("ImageLabel")
 local corescripts = Instance.new("Folder")
+local unknown = Instance.new("TextLabel")
 local etc = Instance.new("Folder")
 local help = Instance.new("Folder")
 local Header_2 = Instance.new("Frame")
@@ -25,11 +26,11 @@ local reset = Instance.new("TextLabel")
 local mockchat = Instance.new("TextLabel")
 local software = Instance.new("TextLabel")
 local lighting = Instance.new("TextLabel")
-local notice = Instance.new("TextLabel")
+local help_3 = Instance.new("TextLabel")
 local _1keybind = Instance.new("TextLabel")
-local noclip_2 = Instance.new("TextLabel")
+local tp = Instance.new("TextLabel")
 local watch = Instance.new("TextLabel")
-local steal = Instance.new("TextLabel")
+local btools = Instance.new("TextLabel")
 local Close = Instance.new("TextButton")
 local Round = Instance.new("ImageLabel")
 local walkair = Instance.new("Folder")
@@ -112,6 +113,8 @@ local Setting_5 = Instance.new("TextLabel")
 local Apply_5 = Instance.new("TextButton")
 local Close_7 = Instance.new("TextButton")
 local Round_8 = Instance.new("ImageLabel")
+local Lock_3 = Instance.new("TextButton")
+local TextLabel = Instance.new("TextLabel")
 local yesclip = Instance.new("Folder")
 local Header_9 = Instance.new("Frame")
 local title_9 = Instance.new("TextLabel")
@@ -134,32 +137,24 @@ local Bar = Instance.new("Frame")
 local Previous = Instance.new("TextButton")
 local Next = Instance.new("TextButton")
 local Title = Instance.new("TextLabel")
+local Execute = Instance.new("TextButton")
 local Close_10 = Instance.new("TextButton")
 local Round_11 = Instance.new("ImageLabel")
-local steal_2 = Instance.new("Folder")
-local Header_12 = Instance.new("Frame")
-local title_12 = Instance.new("TextLabel")
-local MenuContainer_12 = Instance.new("Frame")
-local uname = Instance.new("TextBox")
-local Execute = Instance.new("TextButton")
-local Close_11 = Instance.new("TextButton")
-local Round_12 = Instance.new("ImageLabel")
 local Inject = Instance.new("Frame")
 local Icon_3 = Instance.new("ImageLabel")
 local Lighter = Instance.new("Frame")
 local Darker = Instance.new("Frame")
-local TextLabel = Instance.new("TextLabel")
-local InjectBG = Instance.new("ImageLabel")
+local TextLabel_2 = Instance.new("TextLabel")
 
 --Properties:
 
-Altrix33.Name = "Altrix (3.3)"
-Altrix33.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
-Altrix33.DisplayOrder = 999999999
-Altrix33.ResetOnSpawn = false
+Altrix34.Name = "Altrix (3.4)"
+Altrix34.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+Altrix34.DisplayOrder = 999999999
+Altrix34.ResetOnSpawn = false
 
 core.Name = "core"
-core.Parent = Altrix33
+core.Parent = Altrix34
 
 Header.Name = "Header"
 Header.Parent = core
@@ -215,7 +210,7 @@ VN.Position = UDim2.new(0.850000024, 0, 0, 0)
 VN.Size = UDim2.new(0.150000006, 0, 0.600000024, 0)
 VN.ZIndex = 5
 VN.Font = Enum.Font.SourceSansLight
-VN.Text = "V3.3"
+VN.Text = "V3.4"
 VN.TextColor3 = Color3.fromRGB(255, 255, 255)
 VN.TextScaled = true
 VN.TextSize = 15.000
@@ -232,8 +227,20 @@ Icon.Image = "http://www.roblox.com/asset/?id=4168136877"
 corescripts.Name = "corescripts"
 corescripts.Parent = core
 
+unknown.Name = "unknown"
+unknown.Parent = corescripts
+unknown.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+unknown.BorderSizePixel = 0
+unknown.Position = UDim2.new(0.5, -100, 0.5, -25)
+unknown.Size = UDim2.new(0, 200, 0, 50)
+unknown.Visible = false
+unknown.Font = Enum.Font.SourceSans
+unknown.Text = "Unknown Command"
+unknown.TextColor3 = Color3.fromRGB(255, 255, 255)
+unknown.TextSize = 20.000
+
 etc.Name = "etc"
-etc.Parent = Altrix33
+etc.Parent = Altrix34
 
 help.Name = "help"
 help.Parent = etc
@@ -414,17 +421,17 @@ lighting.TextColor3 = Color3.fromRGB(255, 255, 255)
 lighting.TextSize = 14.000
 lighting.TextXAlignment = Enum.TextXAlignment.Left
 
-notice.Name = "notice"
-notice.Parent = ScrollingFrame
-notice.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-notice.BackgroundTransparency = 0.900
-notice.BorderSizePixel = 0
-notice.Size = UDim2.new(1, 0, 0, 25)
-notice.Font = Enum.Font.SourceSans
-notice.Text = "   help   >   Opens This Window"
-notice.TextColor3 = Color3.fromRGB(255, 255, 255)
-notice.TextSize = 14.000
-notice.TextXAlignment = Enum.TextXAlignment.Left
+help_3.Name = "help"
+help_3.Parent = ScrollingFrame
+help_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+help_3.BackgroundTransparency = 0.900
+help_3.BorderSizePixel = 0
+help_3.Size = UDim2.new(1, 0, 0, 25)
+help_3.Font = Enum.Font.SourceSans
+help_3.Text = "   help   >   Opens This Window"
+help_3.TextColor3 = Color3.fromRGB(255, 255, 255)
+help_3.TextSize = 14.000
+help_3.TextXAlignment = Enum.TextXAlignment.Left
 
 _1keybind.Name = "1keybind"
 _1keybind.Parent = ScrollingFrame
@@ -438,17 +445,17 @@ _1keybind.TextColor3 = Color3.fromRGB(255, 255, 255)
 _1keybind.TextSize = 14.000
 _1keybind.TextXAlignment = Enum.TextXAlignment.Left
 
-noclip_2.Name = "noclip"
-noclip_2.Parent = ScrollingFrame
-noclip_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-noclip_2.BackgroundTransparency = 0.900
-noclip_2.BorderSizePixel = 0
-noclip_2.Size = UDim2.new(1, 0, 0, 25)
-noclip_2.Font = Enum.Font.SourceSans
-noclip_2.Text = "   tp   >   hold ctrl + click to click tp"
-noclip_2.TextColor3 = Color3.fromRGB(255, 255, 255)
-noclip_2.TextSize = 14.000
-noclip_2.TextXAlignment = Enum.TextXAlignment.Left
+tp.Name = "tp"
+tp.Parent = ScrollingFrame
+tp.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+tp.BackgroundTransparency = 0.900
+tp.BorderSizePixel = 0
+tp.Size = UDim2.new(1, 0, 0, 25)
+tp.Font = Enum.Font.SourceSans
+tp.Text = "   tp   >   hold ctrl + click to click tp"
+tp.TextColor3 = Color3.fromRGB(255, 255, 255)
+tp.TextSize = 14.000
+tp.TextXAlignment = Enum.TextXAlignment.Left
 
 watch.Name = "watch"
 watch.Parent = ScrollingFrame
@@ -462,17 +469,17 @@ watch.TextColor3 = Color3.fromRGB(255, 255, 255)
 watch.TextSize = 14.000
 watch.TextXAlignment = Enum.TextXAlignment.Left
 
-steal.Name = "steal"
-steal.Parent = ScrollingFrame
-steal.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-steal.BackgroundTransparency = 0.900
-steal.BorderSizePixel = 0
-steal.Size = UDim2.new(1, 0, 0, 25)
-steal.Font = Enum.Font.SourceSans
-steal.Text = "   steal   >   take items from another player"
-steal.TextColor3 = Color3.fromRGB(255, 255, 255)
-steal.TextSize = 14.000
-steal.TextXAlignment = Enum.TextXAlignment.Left
+btools.Name = "btools"
+btools.Parent = ScrollingFrame
+btools.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+btools.BackgroundTransparency = 0.900
+btools.BorderSizePixel = 0
+btools.Size = UDim2.new(1, 0, 0, 25)
+btools.Font = Enum.Font.SourceSans
+btools.Text = "   btools   >   give building tools"
+btools.TextColor3 = Color3.fromRGB(255, 255, 255)
+btools.TextSize = 14.000
+btools.TextXAlignment = Enum.TextXAlignment.Left
 
 Close.Name = "Close"
 Close.Parent = Header_2
@@ -1348,6 +1355,28 @@ Round_8.ImageColor3 = Color3.fromRGB(91, 0, 0)
 Round_8.ScaleType = Enum.ScaleType.Slice
 Round_8.SliceCenter = Rect.new(100, 100, 100, 100)
 
+Lock_3.Name = "Lock"
+Lock_3.Parent = Header_8
+Lock_3.BackgroundColor3 = Color3.fromRGB(80, 0, 0)
+Lock_3.BorderSizePixel = 0
+Lock_3.Position = UDim2.new(0.5, -62, 1, 200)
+Lock_3.Size = UDim2.new(0, 125, 0, 35)
+Lock_3.Font = Enum.Font.SourceSansBold
+Lock_3.Text = "Lock"
+Lock_3.TextColor3 = Color3.fromRGB(255, 255, 255)
+Lock_3.TextSize = 20.000
+
+TextLabel.Parent = Lock_3
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.BackgroundTransparency = 1.000
+TextLabel.BorderSizePixel = 0
+TextLabel.Position = UDim2.new(0.5, -100, 0, -30)
+TextLabel.Size = UDim2.new(0, 200, 0, 30)
+TextLabel.Font = Enum.Font.SourceSans
+TextLabel.Text = "To Lock: Set All Values"
+TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.TextSize = 20.000
+
 yesclip.Name = "yesclip"
 yesclip.Parent = etc
 
@@ -1527,14 +1556,14 @@ MenuContainer_11.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
 MenuContainer_11.BackgroundTransparency = 0.150
 MenuContainer_11.BorderSizePixel = 0
 MenuContainer_11.Position = UDim2.new(0, 0, 0, 45)
-MenuContainer_11.Size = UDim2.new(0, 300, 0, 50)
+MenuContainer_11.Size = UDim2.new(0, 300, 0, 100)
 
 Bar.Name = "Bar"
 Bar.Parent = MenuContainer_11
 Bar.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
 Bar.BackgroundTransparency = 1.000
 Bar.BorderSizePixel = 0
-Bar.Size = UDim2.new(1, 0, 1, 0)
+Bar.Size = UDim2.new(1, 0, 0.5, 0)
 
 Previous.Name = "Previous"
 Previous.Parent = Bar
@@ -1572,6 +1601,17 @@ Title.TextScaled = true
 Title.TextSize = 14.000
 Title.TextWrapped = true
 
+Execute.Name = "Execute"
+Execute.Parent = MenuContainer_11
+Execute.BackgroundColor3 = Color3.fromRGB(0, 100, 0)
+Execute.BorderSizePixel = 0
+Execute.Position = UDim2.new(0.5, -50, 1, -50)
+Execute.Size = UDim2.new(0, 100, 0, 50)
+Execute.Font = Enum.Font.SourceSans
+Execute.Text = "STEAL"
+Execute.TextColor3 = Color3.fromRGB(255, 255, 255)
+Execute.TextSize = 14.000
+
 Close_10.Name = "Close"
 Close_10.Parent = Header_11
 Close_10.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -1599,94 +1639,10 @@ Round_11.ImageColor3 = Color3.fromRGB(91, 0, 0)
 Round_11.ScaleType = Enum.ScaleType.Slice
 Round_11.SliceCenter = Rect.new(100, 100, 100, 100)
 
-steal_2.Name = "steal"
-steal_2.Parent = etc
-
-Header_12.Name = "Header"
-Header_12.Parent = steal_2
-Header_12.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
-Header_12.BorderSizePixel = 0
-Header_12.Position = UDim2.new(0.5, -150, 0.25, -22)
-Header_12.Selectable = true
-Header_12.Size = UDim2.new(0, 300, 0, 45)
-Header_12.Visible = false
-
-title_12.Name = "title"
-title_12.Parent = Header_12
-title_12.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
-title_12.BackgroundTransparency = 1.000
-title_12.BorderSizePixel = 0
-title_12.Position = UDim2.new(0.25, 0, 0.099999994, 0)
-title_12.Size = UDim2.new(0.5, 0, 0.800000012, 0)
-title_12.ZIndex = 5
-title_12.Font = Enum.Font.SourceSansLight
-title_12.Text = "STEAL"
-title_12.TextColor3 = Color3.fromRGB(255, 255, 255)
-title_12.TextSize = 50.000
-title_12.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
-title_12.TextWrapped = true
-
-MenuContainer_12.Name = "MenuContainer"
-MenuContainer_12.Parent = Header_12
-MenuContainer_12.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-MenuContainer_12.BackgroundTransparency = 0.150
-MenuContainer_12.BorderSizePixel = 0
-MenuContainer_12.Position = UDim2.new(0, 0, 0, 45)
-MenuContainer_12.Size = UDim2.new(0, 300, 0, 50)
-
-uname.Name = "uname"
-uname.Parent = MenuContainer_12
-uname.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-uname.BackgroundTransparency = 1.000
-uname.BorderSizePixel = 0
-uname.Size = UDim2.new(0, 250, 0, 50)
-uname.Font = Enum.Font.SourceSans
-uname.PlaceholderText = "Player To Steal From"
-uname.Text = ""
-uname.TextColor3 = Color3.fromRGB(255, 255, 255)
-uname.TextSize = 20.000
-
-Execute.Name = "Execute"
-Execute.Parent = MenuContainer_12
-Execute.BackgroundColor3 = Color3.fromRGB(0, 100, 0)
-Execute.BorderSizePixel = 0
-Execute.Position = UDim2.new(1, -50, 0, 0)
-Execute.Size = UDim2.new(0, 50, 0, 50)
-Execute.Font = Enum.Font.SourceSans
-Execute.Text = "STEAL"
-Execute.TextColor3 = Color3.fromRGB(255, 255, 255)
-Execute.TextSize = 14.000
-
-Close_11.Name = "Close"
-Close_11.Parent = Header_12
-Close_11.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Close_11.BackgroundTransparency = 1.000
-Close_11.BorderSizePixel = 0
-Close_11.Position = UDim2.new(1, -50, 0.200000003, 0)
-Close_11.Size = UDim2.new(0, 40, 0, 15)
-Close_11.ZIndex = 2
-Close_11.Font = Enum.Font.SourceSans
-Close_11.Text = ""
-Close_11.TextColor3 = Color3.fromRGB(0, 0, 0)
-Close_11.TextSize = 14.000
-
-Round_12.Name = "Round"
-Round_12.Parent = Close_11
-Round_12.Active = true
-Round_12.AnchorPoint = Vector2.new(0.5, 0.5)
-Round_12.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Round_12.BackgroundTransparency = 1.000
-Round_12.Position = UDim2.new(0.5, 0, 0.5, 0)
-Round_12.Selectable = true
-Round_12.Size = UDim2.new(1, 0, 1, 0)
-Round_12.Image = "rbxassetid://3570695787"
-Round_12.ImageColor3 = Color3.fromRGB(91, 0, 0)
-Round_12.ScaleType = Enum.ScaleType.Slice
-Round_12.SliceCenter = Rect.new(100, 100, 100, 100)
-
 Inject.Name = "Inject"
-Inject.Parent = Altrix33
+Inject.Parent = Altrix34
 Inject.BackgroundColor3 = Color3.fromRGB(9, 9, 9)
+Inject.BackgroundTransparency = 1.000
 Inject.BorderSizePixel = 0
 Inject.Position = UDim2.new(0, 0, 0.400000006, 0)
 Inject.Size = UDim2.new(1, 0, 0, 150)
@@ -1695,6 +1651,7 @@ Inject.Visible = false
 Icon_3.Name = "Icon"
 Icon_3.Parent = Inject
 Icon_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Icon_3.BackgroundTransparency = 1.000
 Icon_3.BorderColor3 = Color3.fromRGB(7, 53, 0)
 Icon_3.BorderSizePixel = 0
 Icon_3.LayoutOrder = 2
@@ -1720,71 +1677,103 @@ Darker.Position = UDim2.new(0.5, 0, 0, 0)
 Darker.Size = UDim2.new(0.5, 0, 1, 0)
 Darker.ZIndex = 2
 
-TextLabel.Parent = Inject
-TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel.BackgroundTransparency = 1.000
-TextLabel.BorderSizePixel = 0
-TextLabel.Position = UDim2.new(0.5, -100, 1, 25)
-TextLabel.Size = UDim2.new(0, 200, 0, 50)
-TextLabel.ZIndex = 5
-TextLabel.Font = Enum.Font.SourceSansLight
-TextLabel.Text = "ALTRIX"
-TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel.TextSize = 100.000
+TextLabel_2.Parent = Inject
+TextLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_2.BackgroundTransparency = 1.000
+TextLabel_2.BorderSizePixel = 0
+TextLabel_2.Position = UDim2.new(0.5, -100, 1, 25)
+TextLabel_2.Size = UDim2.new(0, 200, 0, 50)
+TextLabel_2.ZIndex = 5
+TextLabel_2.Font = Enum.Font.SourceSansLight
+TextLabel_2.Text = "ALTRIX"
+TextLabel_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_2.TextSize = 100.000
 
-InjectBG.Name = "InjectBG"
-InjectBG.Parent = Altrix33
-InjectBG.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-InjectBG.Position = UDim2.new(-0.0749999881, 0, -0.0749999881, 0)
-InjectBG.Size = UDim2.new(1.14999998, 0, 1.14999998, 0)
-InjectBG.Visible = false
-InjectBG.Image = "rbxassetid://2024457953"
+-- Module Scripts:
+
+local fake_module_scripts = {}
+
+do -- nil.btools
+	local script = Instance.new('ModuleScript', nil)
+	script.Name = "btools"
+	local function module_script()
+		local module = {}
+			local Players = game:GetService("Players")
+			
+			local localPlayer = Players.LocalPlayer
+			local backpack = localPlayer:WaitForChild("Backpack")
+			
+			local tool = Instance.new("Tool")
+			tool.RequiresHandle = false
+			tool.CanBeDropped = false
+			tool.Parent = backpack
+			tool.Name = "Insert Part"
+			tool.TextureId = "http://www.roblox.com/asset/?id=180084973"
+			
+			
+			tool.Equipped:Connect(function(mouse)
+				mouse.Button1Down:Connect(function()
+					local newpart = Instance.new("Part", workspace)
+				end)
+			end)
+			
+			a = Instance.new("HopperBin", game.Players.LocalPlayer.Backpack)
+			a.BinType = 2
+			b = Instance.new("HopperBin", game.Players.LocalPlayer.Backpack)
+			b.BinType = 3
+			c = Instance.new("HopperBin", game.Players.LocalPlayer.Backpack)
+			c.BinType = 4
+			
+			
+			local tool2 = Instance.new("Tool")
+			tool2.RequiresHandle = false
+			tool2.CanBeDropped = false
+			tool2.Parent = backpack
+			tool2.Name = "Anchor"
+			tool2.TextureId = "http://www.roblox.com/asset/?id=132402257"
+			tool2.Equipped:Connect(function(mouse)
+			mouse.Button1Down:Connect(function()
+			if mouse.Target and mouse.Target.Parent then
+			mouse.Target.Anchored = true
+			
+			
+			end
+			end)
+			end)
+			local tool3 = Instance.new("Tool")
+			tool3.RequiresHandle = false
+			tool3.CanBeDropped = false
+			tool3.Parent = backpack
+			tool3.Name = "UnAnchor"
+			tool3.Equipped:Connect(function(mouse)
+			mouse.Button1Down:Connect(function()
+			if mouse.Target and mouse.Target.Parent then
+			mouse.Target.Anchored = false
+			
+			
+			
+			end
+			end)
+			end)
+		return module
+		
+	end
+	fake_module_scripts[script] = module_script
+end
+
 
 -- Scripts:
 
-local function EWAKLIC_fake_script() -- Altrix33.Changelog 
-	local script = Instance.new('LocalScript', Altrix33)
-
-	--[[
-	_____/\\\\\\\\\_____/\\\__________/\\\\\\\\\\\\\\\____/\\\\\\\\\______/\\\\\\\\\\\__/\\\_______/\\\_        
-	 ___/\\\\\\\\\\\\\__\/\\\_________\///////\\\/////___/\\\///////\\\___\/////\\\///__\///\\\___/\\\/__       
-	  __/\\\/////////\\\_\/\\\_______________\/\\\_______\/\\\_____\/\\\_______\/\\\_______\///\\\\\\/____      
-	   _\/\\\_______\/\\\_\/\\\_______________\/\\\_______\/\\\\\\\\\\\/________\/\\\_________\//\\\\______     
-	    _\/\\\\\\\\\\\\\\\_\/\\\_______________\/\\\_______\/\\\//////\\\________\/\\\__________\/\\\\______    
-	     _\/\\\/////////\\\_\/\\\_______________\/\\\_______\/\\\____\//\\\_______\/\\\__________/\\\\\\_____   
-	      _\/\\\_______\/\\\_\/\\\_______________\/\\\_______\/\\\_____\//\\\______\/\\\________/\\\////\\\___  
-	       _\/\\\_______\/\\\_\/\\\\\\\\\\\\\\\___\/\\\_______\/\\\______\//\\\__/\\\\\\\\\\\__/\\\/___\///\\\_ 
-	        _\///________\///__\///////////////____\///________\///________\///__\///////////__\///_______\///__
-	
-	ALTRIX 3.3:
-	1. Dropped The Letter At The End Of Version Numbers
-	2. Removed An Unused Module "Mock" (may come back in v4)
-	3. Cleaned Up Injection Splash Screen
-	4. Added "watch" command
-	5. Added "steal" command
-	
-	ALTRIX 3.2a:
-	1. Added Automatic Updater
-	
-	ALTRIX 3.1a:
-	1a. Compressed 32 Scripts Into 10
-	1b. ALTRIX Should Run Quicker
-	1c. More Room For More Scripts / Future Exploits!
-	2. Added Back Splash Screen
-	
-	ALTRIX 3.0a:
-	1. Organized Code Layout
-	2. Redesigned whole UI to be modular
-	3. Slimmed Header
-	4. Removed Numbers In Header (Prevents Lag On Resource Intensive Games)
-	5. Fully Integrated "ALTRIX V3 EMULATOR" because.... this is altrix V3
-	5a. This includes lighting options
-	6. Possibly Fixed A Few Anticheat Issues In Most Games
-	--]]
-end
-coroutine.wrap(EWAKLIC_fake_script)()
-local function DBJZZS_fake_script() -- Command.keybind 
+local function VDTQV_fake_script() -- Command.keybind 
 	local script = Instance.new('LocalScript', Command)
+	local req = require
+	local require = function(obj)
+		local fake = fake_module_scripts[obj]
+		if fake then
+			return fake()
+		end
+		return req(obj)
+	end
 
 	local ContextActionService = game:GetService("ContextActionService")
 	local ACTION_NAME = "FocusTheTextBox"
@@ -1797,9 +1786,17 @@ local function DBJZZS_fake_script() -- Command.keybind
 	end
 	ContextActionService:BindAction(ACTION_NAME, handleAction, false, Enum.KeyCode.Semicolon)
 end
-coroutine.wrap(DBJZZS_fake_script)()
-local function EABH_fake_script() -- corescripts.commandhandler 
+coroutine.wrap(VDTQV_fake_script)()
+local function ZPSLFYQ_fake_script() -- corescripts.commandhandler 
 	local script = Instance.new('LocalScript', corescripts)
+	local req = require
+	local require = function(obj)
+		local fake = fake_module_scripts[obj]
+		if fake then
+			return fake()
+		end
+		return req(obj)
+	end
 
 	wait()
 	script.Parent.Parent.Header.Draggable = true
@@ -1847,26 +1844,39 @@ local function EABH_fake_script() -- corescripts.commandhandler
 			open("spectate")
 		elseif command == "steal" then
 			open("steal")
+		elseif command == "btools" then
+			require(script.btools)
 			
 			
 			
 			
-			
-			
+		else
+			script.Parent.unknown.Visible = true
+			wait(1.5)
+			script.Parent.unknown.Visible = false
 		end
 	end
 	
 	
 	cmdimput.FocusLost:connect(function(enterPressed)
 	    if enterPressed then
-			callcmd(cmdimput.Text)
+			local cmdinputtext = cmdimput.Text
 			cmdimput.Text = ""
+			callcmd(cmdinputtext)
 	    end
 	end)
 end
-coroutine.wrap(EABH_fake_script)()
-local function UDMD_fake_script() -- Header_2.HeaderSetup 
+coroutine.wrap(ZPSLFYQ_fake_script)()
+local function CGHDP_fake_script() -- Header_2.HeaderSetup 
 	local script = Instance.new('LocalScript', Header_2)
+	local req = require
+	local require = function(obj)
+		local fake = fake_module_scripts[obj]
+		if fake then
+			return fake()
+		end
+		return req(obj)
+	end
 
 	script.Parent.Visible = false
 	local frame = script.Parent
@@ -1878,9 +1888,17 @@ local function UDMD_fake_script() -- Header_2.HeaderSetup
 		script.Parent.Visible = false
 	end)
 end
-coroutine.wrap(UDMD_fake_script)()
-local function BAZO_fake_script() -- walkair_2.walkair 
+coroutine.wrap(CGHDP_fake_script)()
+local function FFHUFQG_fake_script() -- walkair_2.walkair 
 	local script = Instance.new('LocalScript', walkair_2)
+	local req = require
+	local require = function(obj)
+		local fake = fake_module_scripts[obj]
+		if fake then
+			return fake()
+		end
+		return req(obj)
+	end
 
 	--[[
 		Nah Fam ALTRIX
@@ -1979,9 +1997,17 @@ local function BAZO_fake_script() -- walkair_2.walkair
 	end)
 	Fly()
 end
-coroutine.wrap(BAZO_fake_script)()
-local function PQDHZT_fake_script() -- Header_3.HeaderSetup 
+coroutine.wrap(FFHUFQG_fake_script)()
+local function UZNWB_fake_script() -- Header_3.HeaderSetup 
 	local script = Instance.new('LocalScript', Header_3)
+	local req = require
+	local require = function(obj)
+		local fake = fake_module_scripts[obj]
+		if fake then
+			return fake()
+		end
+		return req(obj)
+	end
 
 	script.Parent.Visible = false
 	local frame = script.Parent
@@ -1993,18 +2019,34 @@ local function PQDHZT_fake_script() -- Header_3.HeaderSetup
 		script.Parent.Visible = false
 	end)
 end
-coroutine.wrap(PQDHZT_fake_script)()
-local function HJGNY_fake_script() -- server.serverspeedgetter 
+coroutine.wrap(UZNWB_fake_script)()
+local function YFUEGMZ_fake_script() -- server.serverspeedgetter 
 	local script = Instance.new('LocalScript', server)
+	local req = require
+	local require = function(obj)
+		local fake = fake_module_scripts[obj]
+		if fake then
+			return fake()
+		end
+		return req(obj)
+	end
 
 	while true do
 		wait(0.01)
 		script.Parent.Text = "Server: "..game.Players.LocalPlayer.Character:WaitForChild("Humanoid").WalkSpeed
 	end
 end
-coroutine.wrap(HJGNY_fake_script)()
-local function PMTU_fake_script() -- client.ClientSpeedUpdate 
+coroutine.wrap(YFUEGMZ_fake_script)()
+local function ZYFWJN_fake_script() -- client.ClientSpeedUpdate 
 	local script = Instance.new('LocalScript', client)
+	local req = require
+	local require = function(obj)
+		local fake = fake_module_scripts[obj]
+		if fake then
+			return fake()
+		end
+		return req(obj)
+	end
 
 	wait()
 	script.Parent.Text = game.Players.LocalPlayer.Character:WaitForChild("Humanoid").WalkSpeed
@@ -2019,9 +2061,17 @@ local function PMTU_fake_script() -- client.ClientSpeedUpdate
 		game.Players.LocalPlayer.Character:WaitForChild("Humanoid").WalkSpeed = script.Parent.Text
 	end)
 end
-coroutine.wrap(PMTU_fake_script)()
-local function KIYEZTB_fake_script() -- Lock.SpeedLocker 
+coroutine.wrap(ZYFWJN_fake_script)()
+local function FPXGYY_fake_script() -- Lock.SpeedLocker 
 	local script = Instance.new('LocalScript', Lock)
+	local req = require
+	local require = function(obj)
+		local fake = fake_module_scripts[obj]
+		if fake then
+			return fake()
+		end
+		return req(obj)
+	end
 
 	script.Parent.MouseButton1Down:connect(function()
 		if script.Parent.BackgroundColor3 == Color3.fromRGB(0,80,0) then
@@ -2033,9 +2083,17 @@ local function KIYEZTB_fake_script() -- Lock.SpeedLocker
 		end 
 	end)
 end
-coroutine.wrap(KIYEZTB_fake_script)()
-local function FIQTIZ_fake_script() -- Lock.SpeedLockerFORCE 
+coroutine.wrap(FPXGYY_fake_script)()
+local function TEPUT_fake_script() -- Lock.SpeedLockerFORCE 
 	local script = Instance.new('LocalScript', Lock)
+	local req = require
+	local require = function(obj)
+		local fake = fake_module_scripts[obj]
+		if fake then
+			return fake()
+		end
+		return req(obj)
+	end
 
 	while true do
 		if script.Parent.BackgroundColor3 == Color3.fromRGB(0,80,0) then
@@ -2044,9 +2102,17 @@ local function FIQTIZ_fake_script() -- Lock.SpeedLockerFORCE
 		wait(0.01)
 	end
 end
-coroutine.wrap(FIQTIZ_fake_script)()
-local function MZWZNBO_fake_script() -- Header_4.HeaderSetup 
+coroutine.wrap(TEPUT_fake_script)()
+local function YOREAA_fake_script() -- Header_4.HeaderSetup 
 	local script = Instance.new('LocalScript', Header_4)
+	local req = require
+	local require = function(obj)
+		local fake = fake_module_scripts[obj]
+		if fake then
+			return fake()
+		end
+		return req(obj)
+	end
 
 	script.Parent.Visible = false
 	local frame = script.Parent
@@ -2058,18 +2124,34 @@ local function MZWZNBO_fake_script() -- Header_4.HeaderSetup
 		script.Parent.Visible = false
 	end)
 end
-coroutine.wrap(MZWZNBO_fake_script)()
-local function JZRJDI_fake_script() -- server_2.serverspeedgetter 
+coroutine.wrap(YOREAA_fake_script)()
+local function OGZW_fake_script() -- server_2.serverspeedgetter 
 	local script = Instance.new('LocalScript', server_2)
+	local req = require
+	local require = function(obj)
+		local fake = fake_module_scripts[obj]
+		if fake then
+			return fake()
+		end
+		return req(obj)
+	end
 
 	while true do
 		wait(0.01)
 		script.Parent.Text = "Server: "..game.Players.LocalPlayer.Character:WaitForChild("Humanoid").JumpPower
 	end
 end
-coroutine.wrap(JZRJDI_fake_script)()
-local function ILHG_fake_script() -- client_2.ClientSpeedUpdate 
+coroutine.wrap(OGZW_fake_script)()
+local function VUAUB_fake_script() -- client_2.ClientSpeedUpdate 
 	local script = Instance.new('LocalScript', client_2)
+	local req = require
+	local require = function(obj)
+		local fake = fake_module_scripts[obj]
+		if fake then
+			return fake()
+		end
+		return req(obj)
+	end
 
 	wait()
 	script.Parent.Text = game.Players.LocalPlayer.Character:WaitForChild("Humanoid").JumpPower
@@ -2084,9 +2166,17 @@ local function ILHG_fake_script() -- client_2.ClientSpeedUpdate
 		game.Players.LocalPlayer.Character:WaitForChild("Humanoid").JumpPower = script.Parent.Text
 	end)
 end
-coroutine.wrap(ILHG_fake_script)()
-local function RPBYIQV_fake_script() -- Lock_2.SpeedLocker 
+coroutine.wrap(VUAUB_fake_script)()
+local function BITKYAF_fake_script() -- Lock_2.SpeedLocker 
 	local script = Instance.new('LocalScript', Lock_2)
+	local req = require
+	local require = function(obj)
+		local fake = fake_module_scripts[obj]
+		if fake then
+			return fake()
+		end
+		return req(obj)
+	end
 
 	script.Parent.MouseButton1Down:connect(function()
 		if script.Parent.BackgroundColor3 == Color3.fromRGB(0,80,0) then
@@ -2098,9 +2188,17 @@ local function RPBYIQV_fake_script() -- Lock_2.SpeedLocker
 		end 
 	end)
 end
-coroutine.wrap(RPBYIQV_fake_script)()
-local function ORCKH_fake_script() -- Lock_2.SpeedLockerFORCE 
+coroutine.wrap(BITKYAF_fake_script)()
+local function EOWREII_fake_script() -- Lock_2.SpeedLockerFORCE 
 	local script = Instance.new('LocalScript', Lock_2)
+	local req = require
+	local require = function(obj)
+		local fake = fake_module_scripts[obj]
+		if fake then
+			return fake()
+		end
+		return req(obj)
+	end
 
 	while true do
 		if script.Parent.BackgroundColor3 == Color3.fromRGB(0,80,0) then
@@ -2109,9 +2207,17 @@ local function ORCKH_fake_script() -- Lock_2.SpeedLockerFORCE
 		wait(0.01)
 	end
 end
-coroutine.wrap(ORCKH_fake_script)()
-local function BEDZ_fake_script() -- Header_5.HeaderSetup 
+coroutine.wrap(EOWREII_fake_script)()
+local function FZRS_fake_script() -- Header_5.HeaderSetup 
 	local script = Instance.new('LocalScript', Header_5)
+	local req = require
+	local require = function(obj)
+		local fake = fake_module_scripts[obj]
+		if fake then
+			return fake()
+		end
+		return req(obj)
+	end
 
 	script.Parent.Visible = false
 	local frame = script.Parent
@@ -2123,17 +2229,33 @@ local function BEDZ_fake_script() -- Header_5.HeaderSetup
 		script.Parent.Visible = false
 	end)
 end
-coroutine.wrap(BEDZ_fake_script)()
-local function OXJB_fake_script() -- Close_5.Closer 
+coroutine.wrap(FZRS_fake_script)()
+local function RPTUM_fake_script() -- Close_5.Closer 
 	local script = Instance.new('LocalScript', Close_5)
+	local req = require
+	local require = function(obj)
+		local fake = fake_module_scripts[obj]
+		if fake then
+			return fake()
+		end
+		return req(obj)
+	end
 
 	script.Parent.MouseButton1Down:connect(function()
 		script.Parent.Parent.Visible = false
 	end)
 end
-coroutine.wrap(OXJB_fake_script)()
-local function ZKFOBD_fake_script() -- Reason2Die.SoftwareActivator 
+coroutine.wrap(RPTUM_fake_script)()
+local function IONI_fake_script() -- Reason2Die.SoftwareActivator 
 	local script = Instance.new('LocalScript', Reason2Die)
+	local req = require
+	local require = function(obj)
+		local fake = fake_module_scripts[obj]
+		if fake then
+			return fake()
+		end
+		return req(obj)
+	end
 
 	function startsoftware()
 		script.Parent.Parent.Parent.Parent.Parent.software[script.Parent.Name].Header.Visible = not script.Parent.Parent.Parent.Parent.Parent.software[script.Parent.Name].Header.Visible
@@ -2146,9 +2268,17 @@ local function ZKFOBD_fake_script() -- Reason2Die.SoftwareActivator
 		startsoftware()
 	end)
 end
-coroutine.wrap(ZKFOBD_fake_script)()
-local function VMFDE_fake_script() -- Header_6.HeaderSetup 
+coroutine.wrap(IONI_fake_script)()
+local function BMHX_fake_script() -- Header_6.HeaderSetup 
 	local script = Instance.new('LocalScript', Header_6)
+	local req = require
+	local require = function(obj)
+		local fake = fake_module_scripts[obj]
+		if fake then
+			return fake()
+		end
+		return req(obj)
+	end
 
 	script.Parent.Visible = false
 	local frame = script.Parent
@@ -2160,9 +2290,17 @@ local function VMFDE_fake_script() -- Header_6.HeaderSetup
 		script.Parent.Visible = false
 	end)
 end
-coroutine.wrap(VMFDE_fake_script)()
-local function SMYCVY_fake_script() -- Expand.hbe 
+coroutine.wrap(BMHX_fake_script)()
+local function AOGT_fake_script() -- Expand.hbe 
 	local script = Instance.new('LocalScript', Expand)
+	local req = require
+	local require = function(obj)
+		local fake = fake_module_scripts[obj]
+		if fake then
+			return fake()
+		end
+		return req(obj)
+	end
 
 	script.Parent.MouseButton1Down:connect(function()
 		if script.Parent.Parent.size.Text == "" then
@@ -2194,9 +2332,17 @@ local function SMYCVY_fake_script() -- Expand.hbe
 		end
 	end)
 end
-coroutine.wrap(SMYCVY_fake_script)()
-local function AQQD_fake_script() -- Header_7.HeaderSetup 
+coroutine.wrap(AOGT_fake_script)()
+local function FSLPC_fake_script() -- Header_7.HeaderSetup 
 	local script = Instance.new('LocalScript', Header_7)
+	local req = require
+	local require = function(obj)
+		local fake = fake_module_scripts[obj]
+		if fake then
+			return fake()
+		end
+		return req(obj)
+	end
 
 	script.Parent.Visible = false
 	local frame = script.Parent
@@ -2208,9 +2354,17 @@ local function AQQD_fake_script() -- Header_7.HeaderSetup
 		script.Parent.Visible = false
 	end)
 end
-coroutine.wrap(AQQD_fake_script)()
-local function IZMKBDW_fake_script() -- Time.LightingApp 
+coroutine.wrap(FSLPC_fake_script)()
+local function PIEYS_fake_script() -- Time.LightingApp 
 	local script = Instance.new('LocalScript', Time)
+	local req = require
+	local require = function(obj)
+		local fake = fake_module_scripts[obj]
+		if fake then
+			return fake()
+		end
+		return req(obj)
+	end
 
 	local apply = script.Parent.Apply
 	local value = script.Parent.Value
@@ -2220,9 +2374,17 @@ local function IZMKBDW_fake_script() -- Time.LightingApp
 		game.Lighting.ClockTime = value.Text
 	end)
 end
-coroutine.wrap(IZMKBDW_fake_script)()
-local function ZQDN_fake_script() -- FogStart.LightingApp 
+coroutine.wrap(PIEYS_fake_script)()
+local function HOPYZL_fake_script() -- FogStart.LightingApp 
 	local script = Instance.new('LocalScript', FogStart)
+	local req = require
+	local require = function(obj)
+		local fake = fake_module_scripts[obj]
+		if fake then
+			return fake()
+		end
+		return req(obj)
+	end
 
 	local apply = script.Parent.Apply
 	local value = script.Parent.Value
@@ -2232,9 +2394,17 @@ local function ZQDN_fake_script() -- FogStart.LightingApp
 		game.Lighting.FogStart = value.Text
 	end)
 end
-coroutine.wrap(ZQDN_fake_script)()
-local function HJIBQUY_fake_script() -- FogEnd.LightingApp 
+coroutine.wrap(HOPYZL_fake_script)()
+local function OHYA_fake_script() -- FogEnd.LightingApp 
 	local script = Instance.new('LocalScript', FogEnd)
+	local req = require
+	local require = function(obj)
+		local fake = fake_module_scripts[obj]
+		if fake then
+			return fake()
+		end
+		return req(obj)
+	end
 
 	local apply = script.Parent.Apply
 	local value = script.Parent.Value
@@ -2244,9 +2414,17 @@ local function HJIBQUY_fake_script() -- FogEnd.LightingApp
 		game.Lighting.FogEnd = value.Text
 	end)
 end
-coroutine.wrap(HJIBQUY_fake_script)()
-local function HFZAL_fake_script() -- Exposure.LightingApp 
+coroutine.wrap(OHYA_fake_script)()
+local function VBIEHL_fake_script() -- Exposure.LightingApp 
 	local script = Instance.new('LocalScript', Exposure)
+	local req = require
+	local require = function(obj)
+		local fake = fake_module_scripts[obj]
+		if fake then
+			return fake()
+		end
+		return req(obj)
+	end
 
 	local apply = script.Parent.Apply
 	local value = script.Parent.Value
@@ -2256,9 +2434,17 @@ local function HFZAL_fake_script() -- Exposure.LightingApp
 		game.Lighting.ExposureCompensation = value.Text
 	end)
 end
-coroutine.wrap(HFZAL_fake_script)()
-local function QENJQ_fake_script() -- Brightness.LightingApp 
+coroutine.wrap(VBIEHL_fake_script)()
+local function ZOHBQL_fake_script() -- Brightness.LightingApp 
 	local script = Instance.new('LocalScript', Brightness)
+	local req = require
+	local require = function(obj)
+		local fake = fake_module_scripts[obj]
+		if fake then
+			return fake()
+		end
+		return req(obj)
+	end
 
 	local apply = script.Parent.Apply
 	local value = script.Parent.Value
@@ -2268,9 +2454,17 @@ local function QENJQ_fake_script() -- Brightness.LightingApp
 		game.Lighting.Brightness = value.Text
 	end)
 end
-coroutine.wrap(QENJQ_fake_script)()
-local function LDODDK_fake_script() -- Header_8.HeaderSetup 
+coroutine.wrap(ZOHBQL_fake_script)()
+local function DPCGD_fake_script() -- Header_8.HeaderSetup 
 	local script = Instance.new('LocalScript', Header_8)
+	local req = require
+	local require = function(obj)
+		local fake = fake_module_scripts[obj]
+		if fake then
+			return fake()
+		end
+		return req(obj)
+	end
 
 	script.Parent.Visible = false
 	local frame = script.Parent
@@ -2282,9 +2476,62 @@ local function LDODDK_fake_script() -- Header_8.HeaderSetup
 		script.Parent.Visible = false
 	end)
 end
-coroutine.wrap(LDODDK_fake_script)()
-local function UXYJJNN_fake_script() -- walkair_3.yesclip 
+coroutine.wrap(DPCGD_fake_script)()
+local function YMHD_fake_script() -- Lock_3.SpeedLocker 
+	local script = Instance.new('LocalScript', Lock_3)
+	local req = require
+	local require = function(obj)
+		local fake = fake_module_scripts[obj]
+		if fake then
+			return fake()
+		end
+		return req(obj)
+	end
+
+	script.Parent.MouseButton1Down:connect(function()
+		if script.Parent.BackgroundColor3 == Color3.fromRGB(0,80,0) then
+			script.Parent.BackgroundColor3 = Color3.fromRGB(80,0,0)
+			script.Parent.Text = "Lock"
+		else 
+			script.Parent.BackgroundColor3 = Color3.fromRGB(0,80,0)
+			script.Parent.Text = "Unlock"
+		end 
+	end)
+end
+coroutine.wrap(YMHD_fake_script)()
+local function YXDR_fake_script() -- Lock_3.SpeedLockerFORCE 
+	local script = Instance.new('LocalScript', Lock_3)
+	local req = require
+	local require = function(obj)
+		local fake = fake_module_scripts[obj]
+		if fake then
+			return fake()
+		end
+		return req(obj)
+	end
+
+	while true do
+		if script.Parent.BackgroundColor3 == Color3.fromRGB(0,80,0) then
+			game.Lighting.Brightness = script.Parent.Parent.MenuContainer.Brightness.Value.Text
+			game.Lighting.ExposureCompensation = script.Parent.Parent.MenuContainer.Exposure.Value.Text
+			game.Lighting.FogEnd = script.Parent.Parent.MenuContainer.FogEnd.Value.Text
+			game.Lighting.FogStart = script.Parent.Parent.MenuContainer.FogStart.Value.Text
+			game.Lighting.ClockTime = script.Parent.Parent.MenuContainer.Time.Value.Text
+		end 
+		wait(0.01)
+	end
+end
+coroutine.wrap(YXDR_fake_script)()
+local function QLPEOJL_fake_script() -- walkair_3.yesclip 
 	local script = Instance.new('LocalScript', walkair_3)
+	local req = require
+	local require = function(obj)
+		local fake = fake_module_scripts[obj]
+		if fake then
+			return fake()
+		end
+		return req(obj)
+	end
 
 	noclip = false
 	game:GetService('RunService').Stepped:connect(function()
@@ -2306,9 +2553,17 @@ local function UXYJJNN_fake_script() -- walkair_3.yesclip
 	end)
 	
 end
-coroutine.wrap(UXYJJNN_fake_script)()
-local function SFBO_fake_script() -- Header_9.HeaderSetup 
+coroutine.wrap(QLPEOJL_fake_script)()
+local function VYPO_fake_script() -- Header_9.HeaderSetup 
 	local script = Instance.new('LocalScript', Header_9)
+	local req = require
+	local require = function(obj)
+		local fake = fake_module_scripts[obj]
+		if fake then
+			return fake()
+		end
+		return req(obj)
+	end
 
 	script.Parent.Visible = false
 	local frame = script.Parent
@@ -2320,9 +2575,17 @@ local function SFBO_fake_script() -- Header_9.HeaderSetup
 		script.Parent.Visible = false
 	end)
 end
-coroutine.wrap(SFBO_fake_script)()
-local function BRORDAU_fake_script() -- walkair_4.kliktp 
+coroutine.wrap(VYPO_fake_script)()
+local function SBSTDSL_fake_script() -- walkair_4.kliktp 
 	local script = Instance.new('LocalScript', walkair_4)
+	local req = require
+	local require = function(obj)
+		local fake = fake_module_scripts[obj]
+		if fake then
+			return fake()
+		end
+		return req(obj)
+	end
 
 	local Player = game.Players.LocalPlayer
 	local Mouse = Player:GetMouse()
@@ -2369,9 +2632,17 @@ local function BRORDAU_fake_script() -- walkair_4.kliktp
 		end 
 	end)
 end
-coroutine.wrap(BRORDAU_fake_script)()
-local function HFSK_fake_script() -- Header_10.HeaderSetup 
+coroutine.wrap(SBSTDSL_fake_script)()
+local function YQQNSC_fake_script() -- Header_10.HeaderSetup 
 	local script = Instance.new('LocalScript', Header_10)
+	local req = require
+	local require = function(obj)
+		local fake = fake_module_scripts[obj]
+		if fake then
+			return fake()
+		end
+		return req(obj)
+	end
 
 	script.Parent.Visible = false
 	local frame = script.Parent
@@ -2383,9 +2654,17 @@ local function HFSK_fake_script() -- Header_10.HeaderSetup
 		script.Parent.Visible = false
 	end)
 end
-coroutine.wrap(HFSK_fake_script)()
-local function ZLNPC_fake_script() -- Bar.Spectate 
+coroutine.wrap(YQQNSC_fake_script)()
+local function IPPCJEW_fake_script() -- Bar.Spectate 
 	local script = Instance.new('LocalScript', Bar)
+	local req = require
+	local require = function(obj)
+		local fake = fake_module_scripts[obj]
+		if fake then
+			return fake()
+		end
+		return req(obj)
+	end
 
 	cam = game.Workspace.CurrentCamera
 	
@@ -2436,35 +2715,38 @@ local function ZLNPC_fake_script() -- Bar.Spectate
 	
 	
 end
-coroutine.wrap(ZLNPC_fake_script)()
-local function HYHCE_fake_script() -- Header_11.HeaderSetup 
-	local script = Instance.new('LocalScript', Header_11)
-
-	script.Parent.Visible = false
-	local frame = script.Parent
-	frame.Draggable = true
-	frame.Selectable = true
-	frame.Active = true
-	
-	script.Parent:WaitForChild("Close").MouseButton1Down:connect(function()
-		script.Parent.Visible = false
-	end)
-end
-coroutine.wrap(HYHCE_fake_script)()
-local function SFBL_fake_script() -- Execute.stealercore 
+coroutine.wrap(IPPCJEW_fake_script)()
+local function LVLZ_fake_script() -- Execute.stealercore 
 	local script = Instance.new('LocalScript', Execute)
+	local req = require
+	local require = function(obj)
+		local fake = fake_module_scripts[obj]
+		if fake then
+			return fake()
+		end
+		return req(obj)
+	end
 
 	script.Parent.MouseButton1Down:connect(function()
-		for i,v in pairs (game:GetService("Players")[script.Parent.Parent.uname.Text].Backpack:GetChildren()) do
+		for i,v in pairs (game:GetService("Players")[script.Parent.Parent.Bar.Title.Text].Backpack:GetChildren()) do
 			if v:IsA("Tool") or v:IsA("HopperBin") then
-				v.Parent = game:GetService("Players").LocalPlayer.Backpack
+				local v2 = v:Clone()
+				v2.Parent = game:GetService("Players").LocalPlayer.Backpack
 			end
 		end
 	end)
 end
-coroutine.wrap(SFBL_fake_script)()
-local function LXEA_fake_script() -- Header_12.HeaderSetup 
-	local script = Instance.new('LocalScript', Header_12)
+coroutine.wrap(LVLZ_fake_script)()
+local function BYDLAXB_fake_script() -- Header_11.HeaderSetup 
+	local script = Instance.new('LocalScript', Header_11)
+	local req = require
+	local require = function(obj)
+		local fake = fake_module_scripts[obj]
+		if fake then
+			return fake()
+		end
+		return req(obj)
+	end
 
 	script.Parent.Visible = false
 	local frame = script.Parent
@@ -2476,18 +2758,25 @@ local function LXEA_fake_script() -- Header_12.HeaderSetup
 		script.Parent.Visible = false
 	end)
 end
-coroutine.wrap(LXEA_fake_script)()
-local function HFRVU_fake_script() -- Inject.Inject 
+coroutine.wrap(BYDLAXB_fake_script)()
+local function PMOZKMX_fake_script() -- Inject.Inject 
 	local script = Instance.new('LocalScript', Inject)
+	local req = require
+	local require = function(obj)
+		local fake = fake_module_scripts[obj]
+		if fake then
+			return fake()
+		end
+		return req(obj)
+	end
 
 	wait()
 	script.Parent.Parent.core:WaitForChild("Header").Visible = false
-	script.Parent.Parent:WaitForChild("InjectBG").Visible = true
 	script.Parent.Visible = true
+	
 	wait(5)
 	script.Parent.Visible = false
 	script.Parent.Parent.core:WaitForChild("Header").Visible = true
-	script.Parent.Parent:WaitForChild("InjectBG"):Destroy()
 	script.Parent:Destroy()
 end
-coroutine.wrap(HFRVU_fake_script)()
+coroutine.wrap(PMOZKMX_fake_script)()
