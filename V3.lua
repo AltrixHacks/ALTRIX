@@ -16,4 +16,5 @@ ALTRIX 3.4:
 5. Lock Lighting Edits
 6. Merged Steal With Spectate
 7. Made Improvements To "steal"
+]]--
 loadstring(game:HttpGet("https://raw.githubusercontent.com/AltrixHacks/ALTRIX/master/App/latest.lua"))();
