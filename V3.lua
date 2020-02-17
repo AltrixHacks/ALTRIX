@@ -8,13 +8,6 @@ _____/\\\\\\\\\_____/\\\__________/\\\\\\\\\\\\\\\____/\\\\\\\\\______/\\\\\\\\\
       _\/\\\_______\/\\\_\/\\\_______________\/\\\_______\/\\\_____\//\\\______\/\\\________/\\\////\\\___  
        _\/\\\_______\/\\\_\/\\\\\\\\\\\\\\\___\/\\\_______\/\\\______\//\\\__/\\\\\\\\\\\__/\\\/___\///\\\_ 
         _\///________\///__\///////////////____\///________\///________\///__\///////////__\///_______\///__
-ALTRIX 3.4:
-1. BTools
-2. Added "Unknown Command" When No Known Command Is Entered
-3. Optimized Execution Of Commands
-4. Removed Injection Splash Background
-5. Lock Lighting Edits
-6. Merged Steal With Spectate
-7. Made Improvements To "steal"
+ALTRIX 3.5:
 ]]--
 loadstring(game:HttpGet("https://raw.githubusercontent.com/AltrixHacks/ALTRIX/master/App/latest.lua"))();
